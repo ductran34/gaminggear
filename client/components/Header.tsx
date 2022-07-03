@@ -16,6 +16,7 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   position: fixed;
   height: 80px;
   width: 100%;
+  padding: 0 3rem;
   background: ${(props) => (props?.scrollNav === false ? "transparent" : "#FE665B")};;
   display: flex;
   justify-content: space-between;
@@ -23,16 +24,12 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   color: #fff;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled.div`
   padding: 0rem 2rem;
+  cursor: pointer;
 `;
 
-const InfoBar = styled.a`
-  display: flex;
-  flex-direction: "row";
-`;
-
-const Circle = styled.a`
+const Circle = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -43,10 +40,11 @@ const Circle = styled.a`
   border-radius: 50px;
   width: 2rem;
   height: 2rem;
+  margin-left:1rem;
 `;
 
-const Text = styled.a`
-  padding: 0rem 2rem;
+const Text = styled.div`
+  padding: 0rem 1rem;
 `;
 
 function Header() {
@@ -75,7 +73,7 @@ function Header() {
           <StyledLink>NXT</StyledLink>
         </Link>
       </div>
-      <div>
+      <div class="flex">
         <Link href='/mouse' passHref>
           <StyledLink>Mouse</StyledLink>
         </Link>
@@ -89,16 +87,17 @@ function Header() {
           <StyledLink>Mousepads</StyledLink>
         </Link>
       </div>
-      <InfoBar>
-        <div css={`display: flex;`}>
+      <div class="flex ">
+        <div class="flex items-center">
           <Circle>3</Circle>
           <Text>$450</Text>
         </div>
-        <div css={`display: flex;`}>
+        <div class="border border-solid border-gray-400"></div>
+        <div class="flex items-center" >
           <Circle>3</Circle>
           <Text>Chris Tran</Text>
         </div>
-      </InfoBar>
+      </div>
     </Nav>
   )
 }
