@@ -22,6 +22,7 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  z-index: 99;
 `;
 
 const StyledLink = styled.div`
@@ -73,7 +74,7 @@ function Header() {
           <StyledLink>NXT</StyledLink>
         </Link>
       </div>
-      <div class="flex">
+      <div className="flex">
         <Link href='/mouse' passHref>
           <StyledLink>Mouse</StyledLink>
         </Link>
@@ -87,13 +88,13 @@ function Header() {
           <StyledLink>Mousepads</StyledLink>
         </Link>
       </div>
-      <div class="flex ">
-        <div class="flex items-center">
+      <div className="flex ">
+        <div className="flex items-center">
           <Circle>3</Circle>
           <Text>$450</Text>
         </div>
-        <div class="border border-solid border-gray-400"></div>
-        <div class="flex items-center" >
+        <div className="border border-solid border-gray-400"></div>
+        <div className="flex items-center" >
           <Circle>3</Circle>
           <Text>Chris Tran</Text>
         </div>
