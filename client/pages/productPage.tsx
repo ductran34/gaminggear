@@ -27,7 +27,7 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <div>
+        <div className="flex flex-row ">
           <div>
             <div className={"text-red-400 font-semibold uppercase text-lg"}>Logitech</div>
             <div className={"text-white font-semibold uppercase text-3lx"}>G PRO Wireless Gaming Mouse</div>
