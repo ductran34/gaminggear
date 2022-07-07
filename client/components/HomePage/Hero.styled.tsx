@@ -6,21 +6,24 @@ import SlideShow from "./SlideShow";
 
 const Container = styled.div`
   display: flex;
-  padding: 4rem 2rem;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
   align-content: center;
   width: 100%;
-  height: 100vh;
+  @media (min-width: 640px) { 
+    height: calc(100vh - 4em);
+  }
 `;
 
 const ScrollBox = styled.div`
   width: 100%;
   max-width: 60rem;
-  background: red;
-  aspect-ratio: 2/1;
+  height: calc(100vh - 4em);
+  @media (min-width: 720px) { 
+    aspect-ratio: 2/1;
+  }
 `;
 
 const DescriptionBox = styled.a``;

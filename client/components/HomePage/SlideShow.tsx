@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import {settings} from "data/settings"
+import { settings, productsInHero } from "data/settings";
 import picture1 from "../../data/mouses/2.png";
 import picture2 from "../../data/mouses/razer/AZ1_DEATHADDERV2.jpg";
 import picture3 from "../../data/mouses/razer/razer-death-adder-gallery-24.png";
@@ -18,16 +18,13 @@ const Arrow = styled.div.attrs<Pick<IArrowProps, "arrowPosition">>((props) => {
   height: 100%;
   width: 10vw;
   cursor: pointer;
-  ${(props) => (props?.arrowPosition === "left" ?
-  "left : 0;" : 
-  "right: 0;")};
+  ${(props) => (props?.arrowPosition === "left" ? "left : 0;" : "right: 0;")};
 `;
 
-const SlideShowContent = styled.div`
+const SlideShowContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  margin: 0 auto;
   overflow: hidden;
 `;
 
@@ -35,25 +32,35 @@ const SlideShowSlide = styled.div`
   white-space: nowrap;
   transition: ease 1000ms;
   width: 100%;
-  height: 100%;
+  height: calc(100% - 4rem);
 `;
 
 const SlideshowDots = styled.div`
   text-align: center;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 4rem;
+  }
 `;
+
+// position: absolute;
+// bottom: 0;
+// left: 50%;
+// transform: translate(-50%, -10%);
+// @media (min-width: 640px) {
+//   transform: translate(-50%, -50%);
 
 const SlideshowDot = styled.div`
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 0.75rem;
+  width: 0.75rem;
   border-radius: 50%;
   cursor: pointer;
-  margin: 15px 7px 0px;
+  margin: 0px 7px;
   background-color: #c4c4c4;
+  @media (min-width: 1024px) {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
 `;
 
 function SlideShow() {
@@ -61,7 +68,6 @@ function SlideShow() {
   const timeoutRef = React.useRef(null);
 
   const delay = 2500;
-  const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -75,7 +81,7 @@ function SlideShow() {
     timeoutRef.current = setTimeout(
       () =>
         setCurrentSile((prevSlide) =>
-          prevSlide === colors.length - 1 ? 0 : prevSlide + 1
+          prevSlide === productsInHero.length - 1 ? 0 : prevSlide + 1
         ),
       delay
     );
@@ -85,48 +91,74 @@ function SlideShow() {
 
   function next() {
     setCurrentSile((prevSlide) =>
-      prevSlide === colors.length - 1 ? 0 : prevSlide + 1
+      prevSlide === productsInHero.length - 1 ? 0 : prevSlide + 1
     );
   }
 
   function back() {
     setCurrentSile((prevSlide) =>
-      prevSlide ===  0 ? colors.length - 1 : prevSlide - 1
+      prevSlide === 0 ? productsInHero.length - 1 : prevSlide - 1
     );
   }
 
   return (
     <div className="h-full flex justify-between items-center relative">
-      <SlideShowContent>
+      <SlideShowContainer>
         <SlideShowSlide
           style={{ transform: `translate3d(${-currentSlide * 100}%, 0, 0)` }}
         >
-          {colors.map((backgroundColor, index) => (
+          {productsInHero.map((product, index) => (
             <div
-              className={"h-full w-full inline-flex flex-row justify-between pl-[10vw]"}
-              style={{
-                backgroundColor: backgroundColor,
-              }}
+              className={"h-full w-full inline-block"}
+              //inline-flex flex-row justify-between
               key={index}
             >
-              <div className="flex flex-col py-10  text-left">
-                  <div className={`text-[#FE665B] font-bold text-2xl`}>NAME BRAND</div>
-                  <div className={`text-[#FFFFFF] font-bold text-[3vw] whitespace-normal`}>G PRO Wireless Gaming Mouse</div>
-                  <div className={`text-[#FE665B] font-bold text-3xl`}>$ 59.00</div>
-                  <div className={`text-[#FFFFFF] font-bold text-2xl line-through decoration-2`}>$ 59.00</div>
-                  <div className="text-center w-60 h-14 bg-[#FE665B] p-2">
-                    <div className={`text-[#FFFFFF] font-bold text-2xl  `}>MORE ON RAZER</div>
-                  </div>   
+              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none">
+                <div className="flex flex-col gap-2 pl-[10vw] py-6 text-left">
+                  <div
+                    className={`text-[#FE665B] font-bold `}
+                  >
+                    {product.brand}
+                  </div>
+                  <div
+                    className={`text-[#FFFFFF] font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] whitespace-normal`}
+                  >
+                    {product.name}
+                  </div>
+                  <div
+                    className={`text-[#FE665B] font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem]`}
+                  >
+                    $ {product.price}
+                  </div>
+                  <div
+                    className={`text-[#FFFFFF] font-bold text-[0.8rem] sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.8rem] line-through decoration-2`}
+                  >
+                    $ {product.oldPirce}
+                  </div>
+                  {/* <div className="text-center w-60 h-14 bg-[#FE665B] p-2">
+                    <div className={`text-[#FFFFFF] font-bold text-2xl  `}>
+                      MORE ON RAZER
+                    </div>
+                  </div> */}
+                </div>
+                <div className="order-first lg:order-last text-center ">
+                  <img
+                    className="h-full"
+                    src={product.image.AZ1_DEATHADDERV2.src}
+                  />
+                </div>
               </div>
-              <img src={picture1.src}/>
             </div>
           ))}
         </SlideShowSlide>
 
         <SlideshowDots>
-          {colors.map((_, idx) => (
+          {productsInHero.map((_, idx) => (
             <SlideshowDot
-              style={{backgroundColor: currentSlide === idx ? `${settings.primaryColor}` : ""}}
+              style={{
+                backgroundColor:
+                  currentSlide === idx ? `${settings.primaryColor}` : "",
+              }}
               key={idx}
               onClick={() => {
                 setCurrentSile(idx);
@@ -134,12 +166,23 @@ function SlideShow() {
             />
           ))}
         </SlideshowDots>
-      </SlideShowContent>
+      </SlideShowContainer>
 
-      <Arrow onClick={()=> {next()}} arrowPosition="right"/>
-      <Arrow onClick={()=> {back()}} arrowPosition="left"/>
+      <Arrow
+        onClick={() => {
+          next();
+        }}
+        arrowPosition="right"
+      />
+      <Arrow
+        onClick={() => {
+          back();
+        }}
+        arrowPosition="left"
+      />
     </div>
   );
 }
 
 export default SlideShow;
+

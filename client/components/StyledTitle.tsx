@@ -23,7 +23,7 @@ const SmallTitle = styled.div`
 `;
 function StyledTitle({children}:Props) {
   return (
-    <div className="relative flex bg-white box-content min-w-full min-h-full">
+    <div className={"relative flex bg-white box-content min-w-full min-h-full"}>
         <BigTitle>{children}</BigTitle>
         <SmallTitle>{children}</SmallTitle>
     </div>

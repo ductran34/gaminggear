@@ -28,6 +28,10 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
 const StyledLink = styled.div`
   padding: 0rem 2rem;
   cursor: pointer;
+  font-weight: 600;
+  :hover {
+    color: #FE665B;
+  }
 `;
 
 const Circle = styled.div`
@@ -46,6 +50,11 @@ const Circle = styled.div`
 
 const Text = styled.div`
   padding: 0rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  :hover {
+    color: #FE665B;
+  }
 `;
 
 function Header() {
@@ -74,7 +83,7 @@ function Header() {
           <StyledLink>NXT</StyledLink>
         </Link>
       </div>
-      <div className="flex">
+      <div className={"flex"}>
         <Link href='/mouse' passHref>
           <StyledLink>Mouse</StyledLink>
         </Link>
@@ -88,13 +97,13 @@ function Header() {
           <StyledLink>Mousepads</StyledLink>
         </Link>
       </div>
-      <div className="flex ">
-        <div className="flex items-center">
+      <div className={"flex "}>
+        <div className={"flex items-center"}>
           <Circle>3</Circle>
           <Text>$450</Text>
         </div>
-        <div className="border border-solid border-gray-400"></div>
-        <div className="flex items-center" >
+        <div className={"border border-solid border-gray-400"}></div>
+        <div className={"flex items-center"}>
           <Circle>3</Circle>
           <Text>Chris Tran</Text>
         </div>
