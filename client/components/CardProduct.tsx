@@ -9,7 +9,7 @@ interface ProductProps {
   salePrice: number;
   productImage: any;
   brandImage: any;
-}
+};
 const Card = styled.div`
   position: relative; 
   background-color: #30303C;
@@ -36,9 +36,8 @@ const SaleBar = styled.div`
   font-weight: 600;
   font-size: 1rem;
   color: white;
-  width: "auto"
-`
-
+  width: "auto";
+`;
 
 function CardProduct({brand, name, salePrice, originalPrice, productImage, brandImage}:ProductProps) {
   return (

@@ -7,13 +7,14 @@ import picture3 from "../../data/mouses/razer/razer-death-adder-gallery-24.png";
 import picture4 from "../../data/mouses/razer/1.png";
 import picture5 from "../../data/mouses//steelseries/purchase-gallery-710-tophero.png__1920x1080_q100_crop-fit_optimize_subsampling-2.png";
 import { Button } from "components/Button.styled";
+import Image from "next/image";
 export interface IArrowProps {
   arrowPosition?: "left" | "right";
 }
 
 const Arrow = styled.div.attrs<Pick<IArrowProps, "arrowPosition">>((props) => {
   arrowPosition: props?.arrowPosition;
-})<IArrowProps>`
+}) <IArrowProps>`
   position: absolute;
   height: 100%;
   width: 10vw;
@@ -85,7 +86,7 @@ function SlideShow() {
       delay
     );
 
-    return () => {};
+    return () => { };
   }, [currentSlide]);
 
   function next() {
@@ -142,9 +143,9 @@ function SlideShow() {
                   </div> */}
                 </div>
                 <div className="order-first lg:order-last text-center ">
-                  <img
+                  <Image
                     className="h-full"
-                    src={product.image.AZ1_DEATHADDERV2.src}
+                    src={product.productImage}
                   />
                 </div>
               </div>
