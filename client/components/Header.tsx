@@ -22,6 +22,7 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   justify-content: space-between;
   align-items: center;
   color: #fff;
+  z-index: 99;
 `;
 
 const StyledLink = styled.div`

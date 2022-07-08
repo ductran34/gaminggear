@@ -19,7 +19,7 @@ export const Button = styled.button.attrs<Pick<IButtonProps, "size">>(
     font-weight: 700;
     line-height: 1.5rem;
     outline: 0 solid transparent;
-    padding: ${(props) => (props?.size === "large" ? "18px 28px" : "8px 18px")};
+    padding: ${(props) => (props?.size === "large" ? "10px 18px" : "8px 18px")};
     width: fit-content;
     word-break: break-word;
     border: 0;
