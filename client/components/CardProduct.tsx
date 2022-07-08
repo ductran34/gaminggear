@@ -1,7 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
-interface Props {
-    children: React.ReactNode;
+import {HiOutlineStar} from 'react-icons/hi';
+import Image, { StaticImageData } from 'next/image';
+interface ProductProps {
+  brand: string;
+  name: string;
+  originalPrice: number;
+  salePrice: number;
+  productImage: any;
+  brandImage: any;
 }
 const Card = styled.div`
   position: relative; 
@@ -21,17 +28,33 @@ const BottomBar = styled.div`
   padding: 1rem 0;
   font-weight: 600;
 `;
-function CardProduct({children}:Props) {
+const SaleBar = styled.div`
+  position: "absolute";
+  top: 2rem;
+  right: 1rem;
+  background: #FE665B;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  width: "auto"
+`
+
+
+function CardProduct({brand, name, salePrice, originalPrice, productImage, brandImage}:ProductProps) {
   return (
     <Card>
+        <HiOutlineStar style={{color: "#FFD853", position: "absolute", top: "2rem", left: "1rem", textShadow: "inset 0px 0px 10px #FFD853"}}/>
+        <SaleBar>20% OFF</SaleBar>
+        <Image style={{position: "absolute", top: "0", width: "50%", }} src={productImage}/>
+        <Image style={{position: "absolute", top: "0", width: "50%", }} src={brandImage}/>
         <BottomBar>
           <div className={"w-full h-1/2 bg-yellow flex flex-row"}>
-            <div className={"w-1/2 border-white border-r-2 border-solid text-white text-xl text-center"}>Rival 710</div>
-            <div className={"w-1/2 text-[#C4C4C4] text-xl text-center"}>Steelseries</div>
+            <div className={"w-1/2 border-white border-r-2 border-solid text-white text-xl text-center"}>{name}</div>
+            <div className={"w-1/2 text-[#C4C4C4] text-xl text-center"}>{brand}</div>
           </div>
           <div className={"w-full h-1/2 bg-yellow flex flex-row justify-end"}>
-            <div className={" text-[#FE665B]  text-2xl text-center mr-3 content-center"}>$56.00</div>
-            <div className={" text-white text-xl text-center mr-3 line-through content-center"}>$86.00</div>
+            <div className={" text-[#FE665B]  text-2xl text-center mr-3 content-center"}>{`$${salePrice}`}</div>
+            <div className={" text-white text-xl text-center mr-3 line-through content-center"}>{`$${originalPrice}`}</div>
           </div>
         </BottomBar>
     </Card>

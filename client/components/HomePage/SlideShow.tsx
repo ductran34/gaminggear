@@ -6,7 +6,7 @@ import picture2 from "../../data/mouses/razer/AZ1_DEATHADDERV2.jpg";
 import picture3 from "../../data/mouses/razer/razer-death-adder-gallery-24.png";
 import picture4 from "../../data/mouses/razer/1.png";
 import picture5 from "../../data/mouses//steelseries/purchase-gallery-710-tophero.png__1920x1080_q100_crop-fit_optimize_subsampling-2.png";
-
+import { Button } from "components/Button.styled";
 export interface IArrowProps {
   arrowPosition?: "left" | "right";
 }
@@ -39,7 +39,7 @@ const SlideshowDots = styled.div`
   text-align: center;
   width: 100%;
   height: 4rem;
-  }
+  background-color: red;
 `;
 
 // position: absolute;
@@ -112,7 +112,7 @@ function SlideShow() {
               className={"h-full w-full inline-block"}     
               key={index}
             >
-              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none"> 
+              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none bg-pink-600"> 
                 <div className="flex flex-col justify-end lg:justify-start gap-2 pl-[10vw] py-6 text-left ">
                   <div
                     className={`text-[#FE665B] text-[1.25rem] md:text-[1.25rem] lg:text-[1.5rem]`}
@@ -127,23 +127,24 @@ function SlideShow() {
                   <div
                     className={`text-[#FE665B] font-bold text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem]`}
                   >
-                    $ {product.price}.00
+                    $ {product.salePrice}
                   </div>
                   <div
                     className={`text-[#FFFFFF] font-bold text-[1rem] sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.5rem] line-through decoration-2`}
                   >
-                    $ {product.oldPirce}.00
+                    $ {product.originalPrice}
                   </div>
-                  <div className="text-center max-w-content h-14 bg-[#FE665B] p-2 cursor-pointer">
+                  <Button size="large" variant="primary" role="button">MORE ON G Pro Wireless</Button>
+                  {/* <div className="text-center w-60 h-14 bg-[#FE665B] p-2">
                     <div className={`text-[#FFFFFF] font-bold text-2xl  `}>
                     MORE ON G 
                     </div>
-                  </div>
+                  </div> */}
                 </div>
-                <div className="order-first lg:order-last flex justify-center">
+                <div className="h-full bg-pink-400 order-first lg:order-last flex justify-center">
                   <img
-                    className="h-full"
-                    src={product.image.AZ1_DEATHADDERV2.src}
+                    className="object-contain h-auto w-full"
+                    src={product.brandImage.src}
                   />
                 </div>
               </div>

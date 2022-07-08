@@ -4,12 +4,14 @@ import Header from "components/Header";
 import styled from "styled-components";
 import BasicLayout from "../layout/Basic";
 import { Fragment, useState } from "react";
+import { settings, productsInHero } from "data/settings";
 import CardProduct from "components/CardProduct";
 import {
   Accordion,
   AccordionHeader,
   AccordionBody,
 } from "@material-tailwind/react";
+import Image from "next/image";
 const image = require('../data/mouses/razer/razer.png');
 const Title = styled.h1`
   color: #FE665B;
@@ -27,23 +29,21 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <div className="flex flex-row ">
+        <div className="flex flex-row justify-between">
           <div>
-            <div className={"text-red-400 font-semibold uppercase text-lg"}>Logitech</div>
-            <div className={"text-white font-semibold uppercase text-3lx"}>G PRO Wireless Gaming Mouse</div>
-            <div className={"text-red-400 font-semibold uppercase text-3lx"}>$5.00</div>
-            <div className={"text-white font-semibold uppercase text-lg line-through"}>$59.00</div>
+            <div className={"text-red-400 font-semibold uppercase text-lg"}>{productsInHero[0].brand}</div>
+            <div className={"text-white font-semibold uppercase text-3lx"}>{productsInHero[0].name}</div>
+            <div className={"text-red-400 font-semibold uppercase text-3lx"}>{productsInHero[0].salePrice}</div>
+            <div className={"text-white font-semibold uppercase text-lg line-through"}>{productsInHero[0].originalPrice}</div>
             <div>
               <div>add to Cart</div>
               <div>heart</div>
             </div>
           </div>
           <div>
-            <img style={{ width: 100 }} src={image.src} />
+            <Image style={{ width: "400px" }} src={image} />
           </div>
-          <CardProduct>
-            ff
-          </CardProduct>
+          <CardProduct {...productsInHero[0]}></CardProduct>
         </div>
       </Container>
     </BasicLayout>
