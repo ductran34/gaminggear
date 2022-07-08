@@ -102,46 +102,45 @@ function SlideShow() {
   }
 
   return (
-    <div className="h-full flex justify-between items-center relative">
+    <div className=" h-full flex justify-between items-center relative ">
       <SlideShowContainer>
         <SlideShowSlide
           style={{ transform: `translate3d(${-currentSlide * 100}%, 0, 0)` }}
         >
           {productsInHero.map((product, index) => (
             <div
-              className={"h-full w-full inline-block"}
-              //inline-flex flex-row justify-between
+              className={"h-full w-full inline-block"}     
               key={index}
             >
-              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none">
-                <div className="flex flex-col gap-2 pl-[10vw] py-6 text-left">
+              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none"> 
+                <div className="flex flex-col justify-end lg:justify-start gap-2 pl-[10vw] py-6 text-left ">
                   <div
-                    className={`text-[#FE665B] font-bold `}
+                    className={`text-[#FE665B] text-[1.25rem] md:text-[1.25rem] lg:text-[1.5rem]`}
                   >
                     {product.brand}
                   </div>
                   <div
-                    className={`text-[#FFFFFF] font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] whitespace-normal`}
+                    className={`text-[#FFFFFF] font-bold text-[1.5rem] md:text-[1.75rem] lg:text-[2.5rem] whitespace-normal`}
                   >
                     {product.name}
                   </div>
                   <div
-                    className={`text-[#FE665B] font-bold text-[1rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem]`}
+                    className={`text-[#FE665B] font-bold text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem]`}
                   >
-                    $ {product.price}
+                    $ {product.price}.00
                   </div>
                   <div
-                    className={`text-[#FFFFFF] font-bold text-[0.8rem] sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.8rem] line-through decoration-2`}
+                    className={`text-[#FFFFFF] font-bold text-[1rem] sm:text-[1.3rem] md:text-[1.55rem] lg:text-[1.5rem] line-through decoration-2`}
                   >
-                    $ {product.oldPirce}
+                    $ {product.oldPirce}.00
                   </div>
-                  {/* <div className="text-center w-60 h-14 bg-[#FE665B] p-2">
+                  <div className="text-center max-w-content h-14 bg-[#FE665B] p-2 cursor-pointer">
                     <div className={`text-[#FFFFFF] font-bold text-2xl  `}>
-                      MORE ON RAZER
+                    MORE ON G 
                     </div>
-                  </div> */}
+                  </div>
                 </div>
-                <div className="order-first lg:order-last text-center ">
+                <div className="order-first lg:order-last flex justify-center">
                   <img
                     className="h-full"
                     src={product.image.AZ1_DEATHADDERV2.src}
@@ -151,7 +150,6 @@ function SlideShow() {
             </div>
           ))}
         </SlideShowSlide>
-
         <SlideshowDots>
           {productsInHero.map((_, idx) => (
             <SlideshowDot

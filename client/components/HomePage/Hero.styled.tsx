@@ -12,9 +12,9 @@ const Container = styled.div`
   text-align: center;
   align-content: center;
   width: 100%;
-  @media (min-width: 640px) { 
-    height: calc(100vh - 4em);
-  }
+  // @media (min-width: 640px) { 
+  //   height: calc(100vh - 4em);
+  // }
 `;
 
 const ScrollBox = styled.div`
@@ -24,21 +24,20 @@ const ScrollBox = styled.div`
   @media (min-width: 720px) { 
     aspect-ratio: 2/1;
   }
+  @media (min-width: 1024px) { 
+    max-height: 28rem;
+  }
 `;
 
-const DescriptionBox = styled.a``;
+const DescriptionBox = styled.div``;
 
 const Hero = () => {
   return (
     <Container>
-      <div
-        className="w-full flex justify-center content-center"
-      >
-        <ScrollBox>
+      <ScrollBox>
           <SlideShow />
         </ScrollBox>
-      </div>
-      <DescriptionBox>
+       {/* DescriptionBox */}
         <div
           style={{
             color: `${settings.primaryColor}`,
@@ -51,7 +50,6 @@ const Hero = () => {
         <div style={{ color: `${settings.whiteColor}` }}>
           Play at your peak with the highest performance gaming equipment from
         </div>
-      </DescriptionBox>
     </Container>
   );
 };
