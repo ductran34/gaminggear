@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
+import {HiOutlineStar} from 'react-icons/hi';
 interface Props {
     children: React.ReactNode;
 }
@@ -21,9 +22,21 @@ const BottomBar = styled.div`
   padding: 1rem 0;
   font-weight: 600;
 `;
+const SaleBar = styled.div`
+  position: "absolute";
+  top: 2rem;
+  right: 1rem;
+  background: #FE665B;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  width: "auto"
+`
 function CardProduct({children}:Props) {
   return (
     <Card>
+        <HiOutlineStar style={{color: "#FFD853", position: "absolute", top: "2rem", left: "1rem", textShadow: "inset 0px 0px 10px #FFD853"}}/>
+        <SaleBar>20% OFF</SaleBar>
         <BottomBar>
           <div className={"w-full h-1/2 bg-yellow flex flex-row"}>
             <div className={"w-1/2 border-white border-r-2 border-solid text-white text-xl text-center"}>Rival 710</div>

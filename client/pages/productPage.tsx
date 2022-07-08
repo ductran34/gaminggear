@@ -27,7 +27,7 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <div className="flex flex-row ">
+        <div className="flex flex-row justify-between">
           <div>
             <div className={"text-red-400 font-semibold uppercase text-lg"}>Logitech</div>
             <div className={"text-white font-semibold uppercase text-3lx"}>G PRO Wireless Gaming Mouse</div>
@@ -39,7 +39,7 @@ const Home = () => {
             </div>
           </div>
           <div>
-            <img style={{ width: 100 }} src={String(image)} />
+            <img className={"w-10 h-10"} src={image.src} />
           </div>
           <CardProduct>
             ff
