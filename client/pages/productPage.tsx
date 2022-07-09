@@ -43,6 +43,7 @@ const Home = () => {
           <div>
             <Image style={{ width: "400px" }} src={image} />
           </div>
+          
           <CardProduct {...productsInHero[0]}></CardProduct>
         </div>
       </Container>

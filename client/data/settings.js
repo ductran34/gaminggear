@@ -1,7 +1,15 @@
-
 /*=========== RAZER PRODUCT IMAGE ===============*/
-import AZ1_DEATHADDERV2 from "../data/mouses/razer/AZ1_DEATHADDERV2.png"
-import logitech from "../data/brands/1.png"
+import AZ1_DEATHADDERV2 from "../data/mouses/razer/AZ1_DEATHADDERV2.png";
+//import logitech from "../data/brands/1.png";
+
+// BRAND LIST LOGO
+import razer from "../data/brands/razer.png";
+import corsair from "../data/brands/corsair.png";
+import hyperx from "../data/brands/hyperx.png";
+import logitech from "../data/brands/logitech.png";
+import dxaracer from "../data/brands/dxaracer.png";
+import steelseries from "../data/brands/steelseries.png";
+
 // function importAll(r) {
 //     let images = {};
 //     r.keys().map(item => { images[item.replace('./', '')] = r(item); });
@@ -12,54 +20,73 @@ import logitech from "../data/brands/1.png"
 
 // <img src={images['0.png']} />
 
-
-
 const settings = {
-    primaryColor : "#FE665B",
-    whiteColor: "#FFFFFF"
-}
+  primaryColor: "#FE665B",
+  whiteColor: "#FFFFFF",
+};
+
+const brandLists = [
+  {
+    brandImage: razer,
+  },
+  {
+    brandImage: corsair,
+  },
+  {
+    brandImage: hyperx,
+  },
+  {
+    brandImage: logitech,
+  },
+  {
+    brandImage: dxaracer,
+  },
+  {
+    brandImage: steelseries,
+  },
+];
 
 const productsInHero = [
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    }
-]
+  {
+    brand: "RAZER",
+    name: "G PRO Wireless Gaming Mouse",
+    salePrice: 59.0,
+    originalPrice: 69.0,
+    productImage: AZ1_DEATHADDERV2,
+    brandImage: logitech,
+  },
+  {
+    brand: "RAZER",
+    name: "G PRO Wireless Gaming Mouse",
+    salePrice: 59.0,
+    originalPrice: 69.0,
+    productImage: AZ1_DEATHADDERV2,
+    brandImage: logitech,
+  },
+  {
+    brand: "RAZER",
+    name: "G PRO Wireless Gaming Mouse",
+    salePrice: 59.0,
+    originalPrice: 69.0,
+    productImage: AZ1_DEATHADDERV2,
+    brandImage: logitech,
+  },
+  {
+    brand: "RAZER",
+    name: "G PRO Wireless Gaming Mouse",
+    salePrice: 59.0,
+    originalPrice: 69.0,
+    productImage: AZ1_DEATHADDERV2,
+    brandImage: logitech,
+  },
+  {
+    brand: "RAZER",
+    name: "G PRO Wireless Gaming Mouse",
+    salePrice: 59.0,
+    originalPrice: 69.0,
+    productImage: AZ1_DEATHADDERV2,
+    brandImage: logitech,
+  },
+];
 
-export  {settings, productsInHero};
+export { settings, productsInHero , brandLists};

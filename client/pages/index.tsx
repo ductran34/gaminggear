@@ -5,6 +5,8 @@ import styled from "styled-components";
 import BasicLayout from "../layout/Basic";
 import StyledTitle from "../components/StyledTitle";
 import Hero from "components/HomePage/Hero.styled";
+import BrandList from "components/HomePage/BrandList";
+import ProductList from "components/HomePage/ProductList";
 const Title = styled.h1`
   color: red;
 `;
@@ -16,6 +18,8 @@ const Home = () => {
       <Container>
         {/* <StyledTitle>Review</StyledTitle> */}
         <Hero/>
+        <BrandList/>
+        <ProductList/>
       </Container>
       
       <Button size="large" variant="primary" role="button">Check\ out</Button>

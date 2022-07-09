@@ -12,9 +12,9 @@ const Container = styled.div`
   text-align: center;
   align-content: center;
   width: 100%;
-  // @media (min-width: 640px) { 
-  //   height: calc(100vh - 4em);
-  // }
+  @media (min-width: 640px) { 
+    height: calc(100vh - 4em);
+  }
 `;
 
 const ScrollBox = styled.div`

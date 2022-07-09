@@ -7,13 +7,14 @@ import picture3 from "../../data/mouses/razer/razer-death-adder-gallery-24.png";
 import picture4 from "../../data/mouses/razer/1.png";
 import picture5 from "../../data/mouses//steelseries/purchase-gallery-710-tophero.png__1920x1080_q100_crop-fit_optimize_subsampling-2.png";
 import { Button } from "components/Button.styled";
+import Image from "next/image";
 export interface IArrowProps {
   arrowPosition?: "left" | "right";
 }
 
 const Arrow = styled.div.attrs<Pick<IArrowProps, "arrowPosition">>((props) => {
   arrowPosition: props?.arrowPosition;
-})<IArrowProps>`
+}) <IArrowProps>`
   position: absolute;
   height: 100%;
   width: 10vw;
@@ -39,15 +40,7 @@ const SlideshowDots = styled.div`
   text-align: center;
   width: 100%;
   height: 4rem;
-  background-color: red;
 `;
-
-// position: absolute;
-// bottom: 0;
-// left: 50%;
-// transform: translate(-50%, -10%);
-// @media (min-width: 640px) {
-//   transform: translate(-50%, -50%);
 
 const SlideshowDot = styled.div`
   display: inline-block;
@@ -86,7 +79,7 @@ function SlideShow() {
       delay
     );
 
-    return () => {};
+    return () => { };
   }, [currentSlide]);
 
   function next() {
@@ -112,7 +105,7 @@ function SlideShow() {
               className={"h-full w-full inline-block"}     
               key={index}
             >
-              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none bg-pink-600"> 
+              <div className="h-full grid grid-rows-2 lg:grid-cols-2 lg:grid-rows-none"> 
                 <div className="flex flex-col justify-end lg:justify-start gap-2 pl-[10vw] py-6 text-left ">
                   <div
                     className={`text-[#FE665B] text-[1.25rem] md:text-[1.25rem] lg:text-[1.5rem]`}
@@ -141,10 +134,11 @@ function SlideShow() {
                     </div>
                   </div> */}
                 </div>
-                <div className="h-full bg-pink-400 order-first lg:order-last flex justify-center">
-                  <img
-                    className="object-contain h-auto w-full"
-                    src={product.brandImage.src}
+                <div className="order-first lg:order-last text-center ">
+                  <Image
+                    objectFit="cover"
+                    className="h-full"
+                    src={product.productImage}
                   />
                 </div>
               </div>
