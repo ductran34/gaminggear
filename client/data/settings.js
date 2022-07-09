@@ -47,46 +47,86 @@ const brandLists = [
 ];
 
 const productsInHero = [
-  {
-    brand: "RAZER",
-    name: "G PRO Wireless Gaming Mouse",
-    salePrice: 59.0,
-    originalPrice: 69.0,
-    productImage: AZ1_DEATHADDERV2,
-    brandImage: logitech,
-  },
-  {
-    brand: "RAZER",
-    name: "G PRO Wireless Gaming Mouse",
-    salePrice: 59.0,
-    originalPrice: 69.0,
-    productImage: AZ1_DEATHADDERV2,
-    brandImage: logitech,
-  },
-  {
-    brand: "RAZER",
-    name: "G PRO Wireless Gaming Mouse",
-    salePrice: 59.0,
-    originalPrice: 69.0,
-    productImage: AZ1_DEATHADDERV2,
-    brandImage: logitech,
-  },
-  {
-    brand: "RAZER",
-    name: "G PRO Wireless Gaming Mouse",
-    salePrice: 59.0,
-    originalPrice: 69.0,
-    productImage: AZ1_DEATHADDERV2,
-    brandImage: logitech,
-  },
-  {
-    brand: "RAZER",
-    name: "G PRO Wireless Gaming Mouse",
-    salePrice: 59.0,
-    originalPrice: 69.0,
-    productImage: AZ1_DEATHADDERV2,
-    brandImage: logitech,
-  },
-];
+    {
+        brand: "RAZER",
+        name: "G PRO Wireless Gaming Mouse",
+        salePrice: 59.00,
+        originalPrice: 69.00,
+        productImage: AZ1_DEATHADDERV2,
+        brandImage: logitech,
+        specifications: [
+            {
+                title: "properties",
+                content: {
+                    battery: 60,
+                    connection: "wireless",
+                    maxSensitivity: 25.600,
+                    maxSpeed: 400
+                }
+            },
+            {
+                title: "Dimensions",
+                content: {
+                    width: 2.50,
+                    height: 4.92,
+                    depth: 1.57,
+                    weight: 80,
+                }
+            },
+        ]
+    },
+    {
+        brand: "RAZER",
+        name: "G PRO Wireless Gaming Mouse",
+        salePrice: 59.00,
+        originalPrice: 69.00,
+        productImage: AZ1_DEATHADDERV2,
+        brandImage: logitech,
+        specifications: [
+            {
+                title: "properties",
+                content: {
+                    battery: 60,
+                    connection: "wireless",
+                    maxSensitivity: 25.600,
+                    maxSpeed: 400
+                }
+            },
+            {
+                title: "Dimensions",
+                content: {
+                    width: 2.50,
+                    height: 4.92,
+                    depth: 1.57,
+                    weight: 80,
+                }
+            },
+        ]
+    },
+    {
+        brand: "RAZER",
+        name: "G PRO Wireless Gaming Mouse",
+        salePrice: 59.00,
+        originalPrice: 69.00,
+        productImage: AZ1_DEATHADDERV2,
+        brandImage: logitech,
+    },
+    {
+        brand: "RAZER",
+        name: "G PRO Wireless Gaming Mouse",
+        salePrice: 59.00,
+        originalPrice: 69.00,
+        productImage: AZ1_DEATHADDERV2,
+        brandImage: logitech,
+    },
+    {
+        brand: "RAZER",
+        name: "G PRO Wireless Gaming Mouse",
+        salePrice: 59.00,
+        originalPrice: 69.00,
+        productImage: AZ1_DEATHADDERV2,
+        brandImage: logitech,
+    }
+]
 
 export { settings, productsInHero , brandLists};

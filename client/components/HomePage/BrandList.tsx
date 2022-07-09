@@ -27,7 +27,7 @@ function BrandList() {
       <TitleList title= "TOP BRANDS" />
       <BrandContainer>
         {brandLists.map((brand, idx) => (
-            <BrandBox>
+            <BrandBox key={idx}>
                 <img className="max-h-[2rem] block mx-auto" src={brand.brandImage.src}/>
             </BrandBox>
         ))}

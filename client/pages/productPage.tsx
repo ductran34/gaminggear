@@ -6,11 +6,7 @@ import BasicLayout from "../layout/Basic";
 import { Fragment, useState } from "react";
 import { settings, productsInHero } from "data/settings";
 import CardProduct from "components/CardProduct";
-import {
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-} from "@material-tailwind/react";
+import Accordion from "components/Accordion";
 import Image from "next/image";
 const image = require('../data/mouses/razer/razer.png');
 const Title = styled.h1`
@@ -19,11 +15,7 @@ const Title = styled.h1`
 
 const Home = () => {
 
-  const [open, setOpen] = useState(0);
-
-  const handleOpen = (value: number) => {
-    setOpen(open === value ? 0 : value);
-  };
+  const [activeIndex, setActiveIndex] = useState(1);
 
   return (
     <BasicLayout>
@@ -43,8 +35,12 @@ const Home = () => {
           <div>
             <Image style={{ width: "400px" }} src={image} />
           </div>
-          
-          <CardProduct {...productsInHero[0]}></CardProduct>
+          <div>
+            {productsInHero[0].specifications?.map((specification, index) => {
+              return <Accordion title={specification?.title} content={specification?.content} index={index} activeIndex={activeIndex} setActiveIndex={setActiveIndex}></Accordion>
+            })}
+          </div>
+          {/* <CardProduct {...productsInHero[0]}></CardProduct> */}
         </div>
       </Container>
     </BasicLayout>
