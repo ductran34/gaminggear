@@ -27,6 +27,26 @@ const productsInHero = [
         originalPrice: 69.00,
         productImage: AZ1_DEATHADDERV2,
         brandImage: logitech,
+        specifications: [
+            {
+                title: "properties",
+                content: {
+                    battery: 60,
+                    connection: "wireless",
+                    maxSensitivity: 25.600,
+                    maxSpeed: 400
+                }
+            },
+            {
+                title: "Dimensions",
+                content: {
+                    width: 2.50,
+                    height: 4.92,
+                    depth: 1.57,
+                    weight: 80,
+                }
+            },
+        ]
     },
     {
         brand: "RAZER",
@@ -35,6 +55,26 @@ const productsInHero = [
         originalPrice: 69.00,
         productImage: AZ1_DEATHADDERV2,
         brandImage: logitech,
+        specifications: [
+            {
+                title: "properties",
+                content: {
+                    battery: 60,
+                    connection: "wireless",
+                    maxSensitivity: 25.600,
+                    maxSpeed: 400
+                }
+            },
+            {
+                title: "Dimensions",
+                content: {
+                    width: 2.50,
+                    height: 4.92,
+                    depth: 1.57,
+                    weight: 80,
+                }
+            },
+        ]
     },
     {
         brand: "RAZER",
