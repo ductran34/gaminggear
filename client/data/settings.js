@@ -48,85 +48,116 @@ const brandLists = [
 
 const productsInHero = [
     {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
+        brand: "Razer",
+        name: "AZ1 DEATHADDER V2",
+        shortName: "AZ1",
+        salePrice: 59.99,
+        originalPrice: 69.99,
         productImage: AZ1_DEATHADDERV2,
         brandImage: logitech,
         specifications: [
             {
+                title: "sensor",
+                content: {
+                    maxSensitivity: 20000,
+                    maxSpeed: 650,
+                    maxAcceleration: 50,
+                    lifecycle: "70 Million Clicks",
+                }
+            },
+            {
                 title: "properties",
                 content: {
-                    battery: 60,
-                    connection: "wireless",
-                    maxSensitivity: 25.600,
-                    maxSpeed: 400
+                    battery: "None",
+                    connection: "wired",
+                    buttons: "8"
                 }
             },
             {
                 title: "Dimensions",
                 content: {
-                    width: 2.50,
-                    height: 4.92,
-                    depth: 1.57,
-                    weight: 80,
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 82,
                 }
             },
         ]
     },
     {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
+        brand: "SteelSeries",
+        name: "Aerox 3 Gaming Mouse",
+        shortName: "Aerox",
+        salePrice: 39.99,
+        originalPrice: 59.99,
         productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
+        brandImage: steelseries,
         specifications: [
+            {
+                title: "sensor",
+                content: {
+                    maxSensitivity: 20000,
+                    maxSpeed: 300,
+                    maxAcceleration: 35,
+                    lifecycle: "80 Million Clicks",
+                }
+            },
             {
                 title: "properties",
                 content: {
-                    battery: 60,
-                    connection: "wireless",
-                    maxSensitivity: 25.600,
-                    maxSpeed: 400
+                    battery: "None",
+                    connection: "wired",
+                    buttons: "6"
                 }
             },
             {
                 title: "Dimensions",
                 content: {
-                    width: 2.50,
-                    height: 4.92,
-                    depth: 1.57,
-                    weight: 80,
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
                 }
             },
         ]
     },
     {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
+        brand: "SteelSeries",
+        name: "Rival 5 Gaming Mouse",
+        shortName: "RIval 5",
+        salePrice: 39.99,
+        originalPrice: 59.99,
         productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
+        brandImage: steelseries,
+        specifications: [
+            {
+                title: "sensor",
+                content: {
+                    maxSensitivity: 20000,
+                    maxSpeed: 400,
+                    maxAcceleration: 40,
+                    lifecycle: "80 Million Clicks",
+                }
+            },
+            {
+                title: "properties",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                    buttons: "9"
+                }
+            },
+            {
+                title: "Dimensions",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
     },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    },
-    {
-        brand: "RAZER",
-        name: "G PRO Wireless Gaming Mouse",
-        salePrice: 59.00,
-        originalPrice: 69.00,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
-    }
 ]
 
 export { settings, productsInHero , brandLists};
