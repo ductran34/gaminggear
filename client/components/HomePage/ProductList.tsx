@@ -3,20 +3,19 @@ import TitleList from "./TitleList";
 import styled from "styled-components";
 import CardProduct from "components/CardProduct";
 import { productsInHero } from "data/settings";
-
 const ProductContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-template-rows: repeat(auto, 30px);
+  grid-auto-rows: 500px;
   align-items: center;
   justify-content: space-between;
 
-  grid-gap: 10px;
+  grid-gap: 20px;
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
 
   @media (min-width: 640px) {
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   }
 `;
 
@@ -37,18 +36,14 @@ function ProductList() {
     <div>
       <TitleList title="BEST SELLING" />
       <ProductContainer>
-        <Card/>
-        <ProductBox>
-            <div className="bg-[#30303C] flex-1">
-             s
-            </div>
-            <div className="bg-[#191928] h-[35%]">a</div>
-        </ProductBox>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
-        <Card/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
+        <CardProduct {...productsInHero[0]}/>
       </ProductContainer>
     </div>
   );

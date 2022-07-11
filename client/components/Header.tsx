@@ -37,15 +37,14 @@ const StyledLink = styled.div`
 const Circle = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   align-content: center;
+  justify-content: center;
   background-color: #FE665B;
   border-radius: 50px;
   width: 2rem;
   height: 2rem;
   margin-left:1rem;
+  line-height: 2rem;
 `;
 
 const Text = styled.div`
