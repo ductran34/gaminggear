@@ -39,14 +39,11 @@ function ProductList() {
       <ProductContainer>
         <Card/>
         <ProductBox>
-            <div className="bg-[#191933] flex-1">
-                ss
+            <div className="bg-[#30303C] flex-1">
+             s
             </div>
             <div className="bg-[#191928] h-[35%]">a</div>
         </ProductBox>
-        <Card/>
-        <Card/>
-        <Card/>
         <Card/>
         <Card/>
         <Card/>
@@ -61,7 +58,7 @@ function Card() {
     return(
         <ProductBox>
             <div className="bg-[#30303C] flex-1">
-                {/* <img className="w-full h-auto" src={productsInHero[0].brandImage.src}/> */}
+              s
             </div>
             <div className="bg-[#191928] h-[35%]">a</div>
         </ProductBox>

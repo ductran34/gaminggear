@@ -10,6 +10,12 @@ import logitech from "../data/brands/logitech.png";
 import dxaracer from "../data/brands/dxaracer.png";
 import steelseries from "../data/brands/steelseries.png";
 
+import a from "../data/brands/1.png";
+
+// STAR FILL 
+import star_fill from "../data/asserts/star_fill.png"
+import star_unfill from "../data/asserts/star_unfill.png"
+
 // function importAll(r) {
 //     let images = {};
 //     r.keys().map(item => { images[item.replace('./', '')] = r(item); });
@@ -53,7 +59,7 @@ const productsInHero = [
         salePrice: 59.00,
         originalPrice: 69.00,
         productImage: AZ1_DEATHADDERV2,
-        brandImage: logitech,
+        brandImage: a,
         specifications: [
             {
                 title: "properties",
