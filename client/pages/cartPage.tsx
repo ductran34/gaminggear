@@ -16,9 +16,9 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <div className="grid-cols-1 lg:grid-cols-5">
+        <div className="grid grid-cols-1 lg:grid-cols-5">
             <div className="bg-white col-span-1 lg:col-span-3">f</div>
-            <div className="bg-gray-50 col-span-1 lg:col-span-3">f</div>
+            <div className="bg-[#191928] col-span-1 lg:col-span-2">f</div>
         </div>
       </Container>
     </BasicLayout>
