@@ -37,7 +37,7 @@ const SaleBar = styled.div`
   font-weight: 600;
   font-size: 1rem;
   color: white;
-  padding: 0 0.25rem;
+  padding: 0.25rem 0.5rem;
 `;
 
 function CardProduct({brand, name,shortName, salePrice, originalPrice, productImage, brandImage}:ProductProps) {
@@ -54,7 +54,7 @@ function CardProduct({brand, name,shortName, salePrice, originalPrice, productIm
             <div className={"w-1/2 text-[#C4C4C4] text-lg text-center"}>{brand}</div>
           </div>
           <div className={"w-full h-1/2 bg-yellow flex flex-row justify-end items-center"}>
-            <div className={" text-[#FE665B]  text-2xl text-center mr-3 content-center"}>{`$${salePrice}`}</div>
+            <div className={" text-[#FE665B]  text-xl text-center mr-3 content-center"}>{`$${salePrice}`}</div>
             <div className={" text-white text-xl text-center mr-3 line-through content-center"}>{`$${originalPrice}`}</div>
           </div>
         </BottomBar>

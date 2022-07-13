@@ -1,5 +1,5 @@
 /*=========== RAZER PRODUCT IMAGE ===============*/
-import AZ1_DEATHADDERV2 from "../data/mouses/razer/AZ1_DEATHADDERV2.png";
+import AZ1_DEATHADDERV2 from "../data/mouses/razer/az1_razer_1.png";
 //import logitech from "../data/brands/1.png";
 
 // BRAND LIST LOGO
@@ -7,7 +7,7 @@ import razer from "../data/brands/razer.png";
 import corsair from "../data/brands/corsair.png";
 import hyperx from "../data/brands/hyperx.png";
 import logitech from "../data/brands/logitech.png";
-import dxaracer from "../data/brands/dxaracer.png";
+import dxracer from "../data/brands/dxracer.png";
 import steelseries from "../data/brands/steelseries.png";
 
 import a from "../data/brands/1.png";
@@ -45,7 +45,7 @@ const brandLists = [
     brandImage: logitech,
   },
   {
-    brandImage: dxaracer,
+    brandImage: dxracer,
   },
   {
     brandImage: steelseries,
@@ -55,9 +55,9 @@ const brandLists = [
 const productsInHero = [
     {
         brand: "Razer",
-        name: "AZ1 DEATHADDER V2",
+        name: "AZ1 Deathadder Pro",
         shortName: "AZ1",
-        salePrice: 59.99,
+        salePrice: 69.99,
         originalPrice: 69.99,
         productImage: AZ1_DEATHADDERV2,
         brandImage: a,
