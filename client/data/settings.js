@@ -2,6 +2,14 @@
 import AZ1_DEATHADDERV2 from "../data/mouses/razer/az1_razer_1.png";
 //import logitech from "../data/brands/1.png";
 
+// BRAND LIST FULL LOGO
+import razer_full from "../data/brands/razer_full.png";
+import corsair_full from "../data/brands/corsair_full.png";
+import hyperx_full from "../data/brands/hyperx_full.png";
+import logitech_full from "../data/brands/logitech_full.png";
+import dxracer_full from "../data/brands/dxracer_full.png";
+import steelseries_full from "../data/brands/steelseries_full.png";
+
 // BRAND LIST LOGO
 import razer from "../data/brands/razer.png";
 import corsair from "../data/brands/corsair.png";
@@ -9,8 +17,8 @@ import hyperx from "../data/brands/hyperx.png";
 import logitech from "../data/brands/logitech.png";
 import dxracer from "../data/brands/dxracer.png";
 import steelseries from "../data/brands/steelseries.png";
-
-import a from "../data/brands/1.png";
+import playstation from "../data/brands/playstation.png";
+import xbox from "../data/brands/xbox.png";
 
 // STAR FILL 
 import star_fill from "../data/asserts/star_fill.png"
@@ -33,22 +41,42 @@ const settings = {
 
 const brandLists = [
   {
-    brandImage: razer,
+    brandName: "razer",
+    brandImage: razer_full,
+    brandLogo: razer,
   },
   {
-    brandImage: corsair,
+    brandName: "corsair",
+    brandImage: corsair_full,
+    brandLogo: corsair
   },
   {
-    brandImage: hyperx,
+    brandName: "hyperx",
+    brandImage: hyperx_full,
+    brandLogo: hyperx
   },
   {
-    brandImage: logitech,
+    brandName: "logitech",
+    brandImage: logitech_full,
+    brandLogo: logitech
   },
   {
-    brandImage: dxracer,
+    brandName: "dxracer",
+    brandImage: dxracer_full,
+    brandLogo: dxracer
   },
   {
-    brandImage: steelseries,
+    brandName: "steelseries",
+    brandImage: steelseries_full,
+    brandLogo: steelseries
+  },
+  {
+    brandName: "playstation",
+    brandLogo: playstation
+  },
+  {
+    brandName: "xbox",
+    brandLogo: xbox
   },
 ];
 
@@ -57,10 +85,10 @@ const productsInHero = [
         brand: "Razer",
         name: "AZ1 Deathadder Pro",
         shortName: "AZ1",
-        salePrice: 69.99,
+        salePrice: 59.99,
         originalPrice: 69.99,
         productImage: AZ1_DEATHADDERV2,
-        brandImage: a,
+        brandImage: razer_full,
         specifications: [
             {
                 title: "sensor",

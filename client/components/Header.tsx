@@ -107,10 +107,12 @@ function Header() {
         </Link>
       </div>
       <div className={"flex "}>
-        <div className={"flex items-center"}>
-          <Circle scrollNav={isScrolled}>3</Circle>
-          <Text>$450</Text>
-        </div>
+        <Link href='/cartPage' passHref>
+          <div className={"flex items-center"}>
+            <Circle scrollNav={isScrolled}>3</Circle>
+            <Text>$450</Text>
+          </div>
+        </Link>
         <div className={"border border-solid border-gray-400"}></div>
         <div className={"flex items-center"}>
           <Circle scrollNav={isScrolled}>3</Circle>

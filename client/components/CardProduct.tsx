@@ -43,13 +43,13 @@ const SaleBar = styled.div`
 function CardProduct({brand, name,shortName, salePrice, originalPrice, productImage, brandImage}:ProductProps) {
   return (
     <Card>
-        <HiOutlineStar style={{color: "#FFD853", position: "absolute", top: "2rem", left: "1rem", textShadow: "inset 0px 0px 10px #FFD853"}}/>
+        <HiOutlineStar style={{color: "#FFD853", fontSize: "2rem", position: "absolute", top: "2rem", left: "1rem", textShadow: "inset 0px 0px 10px #FFD853"}}/>
        
-        <Image style={{position: "absolute", top: "0", width: "50%", }} src={productImage}/>
+        <Image style={{position: "absolute", top: "0", width: "25%", }} src={productImage}/>
         {/* <Image style={{position: "absolute", top: "0", width: "50%", }} src={brandImage}/> */}
         <SaleBar>20% OFF</SaleBar>
         <BottomBar>
-          <div className={"w-full h-1/2 bg-yellow flex flex-row mb-2"}>
+          <div className={"w-full h-1/2 bg-yellow flex flex-row mb-2 leading-none"}>
             <div className={"w-1/2 border-white border-r-2 border-solid text-white text-xl text-center"}>{shortName}</div>
             <div className={"w-1/2 text-[#C4C4C4] text-lg text-center"}>{brand}</div>
           </div>
