@@ -8,7 +8,7 @@ import { settings, productsInHero } from "data/settings";
 import {AiOutlineHeart} from "react-icons/ai";
 import Accordion from "components/Accordion";
 import Image from "next/image";
-const image = require('../data/mouses/razer/razer.png');
+import image from '../data/mouses/razer/az1_razer_2.png';
 const ProductInfo = styled.div`
   width: 100%;
   /* display: grid;

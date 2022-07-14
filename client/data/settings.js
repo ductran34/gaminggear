@@ -1,4 +1,5 @@
 /*=========== RAZER PRODUCT IMAGE ===============*/
+
 import AZ1_DEATHADDERV2 from "../data/mouses/razer/AZ1_DEATHADDERV2.png";
 //import logitech from "../data/brands/1.png";
 
@@ -29,6 +30,7 @@ import star_unfill from "../data/asserts/star_unfill.png"
 const settings = {
   primaryColor: "#FE665B",
   whiteColor: "#FFFFFF",
+  starColor: "#FFD853",
 };
 
 const brandLists = [

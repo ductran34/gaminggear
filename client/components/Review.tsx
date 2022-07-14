@@ -6,6 +6,7 @@ import { brandLists } from "../data/settings";
 import star_fill from "../data/asserts/star_fill.png";
 import star_unfill from "../data/asserts/star_unfill.png";
 import rating_line from "../data/asserts/rating_line.png";
+import Star from "./Star";
 
 const RatingContainer1 = styled.div`
   width: 100%;
@@ -57,27 +58,46 @@ function StarRating({ index }: StarRatingProps) {
   );
 }
 
+interface ProductOverallStarProps {
+  point: number;
+}
+
+// This component is showing the overall rating by stars of the product
+function ProductOverallStar({ point }: ProductOverallStarProps) {
+  let isInteger = Number.isInteger(point);
+  let roundedNumber = Math.floor(point);
+  return (
+    <div className="text-amber-300 font-black">
+      {[...Array(5)].map((brand, idx) => {
+        if (idx < roundedNumber) {
+          return <Star isFill="fill" key={idx} />;
+        } else if (idx === roundedNumber) {
+          if (isInteger === false) {
+            return <Star isFill="half" key={idx} />;
+          } else {
+            return <Star isFill="unfill" key={idx} />;
+          }
+        } else {
+          return <Star isFill="unfill" key={idx} />;
+        }
+      })}
+    </div>
+  );
+}
+
 // This commponent shows the rating of the product
 function RatingContainer() {
   return (
     <div className="bg-[#191928] rounded-md grid md:grid-cols-2 lg:grid-cols-1 2xl:grid-cols-2 gap-4 p-4">
       <div className="flex flex-col justify-around text-center">
         <div className="">
-          <div className="text-[4rem] font-bold">4.8/5</div>
+          <div className="text-[4rem] font-bold">3.8/5</div>
           <div className="text-[1rem] font-bold">based on 120 reviews</div>
         </div>
-        <div className="text-amber-300 font-black">
-          {[1, 1, 1, 1, 1].map((brand, idx) => (
-            <img
-              className="w-10 h-10 rounded-full inline-block"
-              src={star_fill.src}
-              alt="Rounded avatar"
-            />
-          ))}
-        </div>
+        <ProductOverallStar point={3.8} />
       </div>
       <div className="text-center">
-        {[1, 1, 1, 1, 1].map((brand, idx) => (
+        {[...Array(5)].map((brand, idx) => (
           <StarRating key={idx} index={idx + 1} />
         ))}
       </div>
@@ -90,12 +110,12 @@ function CustomerComment() {
   const [isOpenCommentBox, setIsOpenCommentBox] = useState(false);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2">
       <div>Review this product</div>
       <div className="font-light text-[1rem]">
         Share your thoughts with other customers
       </div>
-
+      <CustomerGivingStar />
       {isOpenCommentBox === true ? (
         <form className="flex-1 flex flex-col justify-end w-full bg-gray-50 rounded-lg border border-gray-200 dark:bg-gray-700 dark:border-gray-600">
           <div className="flex-1 py-2 px-4 bg-[#191928] rounded-t-lg dark:bg-gray-800">
@@ -187,7 +207,37 @@ function CustomerComment() {
   );
 }
 
-// This component shows all of the comment reviews of other users
+// This component allows user rate the product by giving star
+function CustomerGivingStar() {
+  const [rating, setRating] = useState(0);
+  const [hover, setHover] = useState(0);
+
+  return (
+    <div className="text-amber-300 font-black inline-block">
+      {[...Array(5)].map((brand, idx) => {
+        return (
+          <div
+            onClick={() => setRating(idx)}
+            onMouseEnter={() => setHover(idx)}
+            onMouseLeave={() => setHover(rating)}
+            onDoubleClick={() => {
+              setRating(0);
+              setHover(0);
+              }}
+            className="inline-block"
+          >
+            <Star
+              key={idx}
+              isFill={idx <= (hover || rating) ? "fill" : "unfill"}
+            />
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+// This component shows a comment reviews of other users
 function CommentCard() {
   return (
     <div className="py-6 text-[1.2rem] w-full border-b border-grey-600">
@@ -200,7 +250,9 @@ function CommentCard() {
           />
           <div className="font-medium inline-block px-2">Muath T.</div>
           <div className="text-amber-300 font-black inline-block">
-            * * * * *
+            {[...Array(5)].map((brand, idx) => (
+              <Star isFill="full" key={idx} />
+            ))}
           </div>
         </div>
         <div className="font-thin text-[1rem]">04/03/2022</div>
