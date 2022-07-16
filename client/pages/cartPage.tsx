@@ -7,6 +7,7 @@ import { Fragment, useState } from "react";
 import { settings, productsInHero } from "data/settings";
 
 import Image from "next/image";
+import ItemInCart from "components/ItemInCart";
 
 
 const Home = () => {
@@ -16,8 +17,10 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-5">
-            <div className="bg-white col-span-1 lg:col-span-3">f</div>
+        <div className="grid gap-x-5 grid-cols-1 lg:grid-cols-5">
+            <div className="col-span-1 lg:col-span-3">
+                <ItemInCart {...productsInHero[0]}/>
+            </div>
             <div className="bg-[#191928] col-span-1 lg:col-span-2">f</div>
         </div>
       </Container>

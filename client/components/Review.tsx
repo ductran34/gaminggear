@@ -225,9 +225,10 @@ function CustomerGivingStar() {
               setHover(0);
               }}
             className="inline-block"
+            key={idx}
           >
             <Star
-              key={idx}
+            
               isFill={idx <= (hover || rating) ? "fill" : "unfill"}
             />
           </div>

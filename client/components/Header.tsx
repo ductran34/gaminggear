@@ -7,6 +7,10 @@ export interface INavProps {
   variant?: "primary" | "secondary";
   scrollNav: boolean;
 }
+export interface ICircleProps {
+  variant?: "primary" | "secondary";
+  scrollNav: boolean;
+}
 
 const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   (props) => {
@@ -17,12 +21,13 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   height: 80px;
   width: 100%;
   padding: 0 3rem;
-  background: ${(props) => (props?.scrollNav === false ? "transparent" : "#FE665B")};;
+  background: ${(props) => (props?.scrollNav === false ? "transparent" : "#FE665B")};
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: #fff;
   z-index: 99;
+  transition: 0.2s all ease-in;
 `;
 
 const StyledLink = styled.div`
@@ -33,18 +38,23 @@ const StyledLink = styled.div`
     color: #FE665B;
   }
 `;
-
-const Circle = styled.div`
+const Circle = styled.nav.attrs<Pick<ICircleProps, "scrollNav">>(
+  (props) => {
+    scrollNav: props?.scrollNav;
+  }
+)<ICircleProps>`
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  background-color: #FE665B;
+  background: ${(props) => (props?.scrollNav === false ? "#FE665B" : "#FFFFFF")};
+  color: ${(props) => (props?.scrollNav === false ? "#FFFFFF" : "#FE665B")};
   border-radius: 50px;
   width: 2rem;
   height: 2rem;
   margin-left:1rem;
   line-height: 2rem;
+  transition: 0.2s all ease-in;
 `;
 
 const Text = styled.div`
@@ -98,12 +108,12 @@ function Header() {
       </div>
       <div className={"flex "}>
         <div className={"flex items-center"}>
-          <Circle>3</Circle>
+          <Circle scrollNav={isScrolled}>3</Circle>
           <Text>$450</Text>
         </div>
         <div className={"border border-solid border-gray-400"}></div>
         <div className={"flex items-center"}>
-          <Circle>3</Circle>
+          <Circle scrollNav={isScrolled}>3</Circle>
           <Text>Chris Tran</Text>
         </div>
       </div>
