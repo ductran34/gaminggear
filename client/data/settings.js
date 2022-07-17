@@ -9,7 +9,8 @@ import hyperx_full from "../data/brands/hyperx_full.png";
 import logitech_full from "../data/brands/logitech_full.png";
 import dxracer_full from "../data/brands/dxracer_full.png";
 import steelseries_full from "../data/brands/steelseries_full.png";
-
+import playstation_full from "../data/brands/playstation_full.png";
+import xbox_full from "../data/brands/xbox_full.png";
 // BRAND LIST LOGO
 import razer from "../data/brands/razer.png";
 import corsair from "../data/brands/corsair.png";
@@ -72,10 +73,12 @@ const brandLists = [
   },
   {
     brandName: "playstation",
+    brandImage: playstation_full,
     brandLogo: playstation
   },
   {
     brandName: "xbox",
+    brandImage: xbox_full,
     brandLogo: xbox
   },
 ];
@@ -89,6 +92,7 @@ const productsInHero = [
         originalPrice: 69.99,
         productImage: AZ1_DEATHADDERV2,
         brandImage: razer_full,
+        brandLogo: razer,
         specifications: [
             {
                 title: "sensor",

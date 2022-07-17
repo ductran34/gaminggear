@@ -2,6 +2,7 @@ import React from "react";
 import TitleList from "./TitleList";
 import styled from "styled-components";
 import {brandLists} from "../../data/settings"
+import Image from "next/image";
 
 const BrandContainer = styled.div`
   width: 100%;
