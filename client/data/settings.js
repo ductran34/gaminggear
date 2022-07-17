@@ -38,6 +38,7 @@ import star_unfill from "../data/asserts/star_unfill.png"
 const settings = {
   primaryColor: "#FE665B",
   whiteColor: "#FFFFFF",
+  starColor: "#FFD853",
 };
 
 const brandLists = [

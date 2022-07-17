@@ -8,6 +8,7 @@ import Hero from "components/HomePage/Hero.styled";
 import BrandList from "components/HomePage/BrandList";
 import ProductList from "components/HomePage/ProductList";
 import Review from "components/Review";
+import ShoppingCart from "components/ShoppingCart";
 const Title = styled.h1`
   color: red;
 `;
@@ -22,6 +23,7 @@ const Home = () => {
         <BrandList/>
         <ProductList/>
         <Review/>
+        <ShoppingCart/>
       </Container>
       
       <Button size="large" variant="primary" role="button">Check\ out</Button>
