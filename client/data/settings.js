@@ -41,6 +41,42 @@ const settings = {
   starColor: "#FFD853",
 };
 
+
+const productAttribute = [
+    {
+        label: "BRAND",
+        type: "option",
+        options: [
+            "Logitech", "Razer", "Corsair", "Hyperx", "Dxracer", "Steelseries"
+        ]
+    },
+    {
+        label: "CATEGORY",
+        type: "option",
+        options : ["Mouse", "Keyboard","Headsets","Chairs"]
+    },
+    {
+        label: "ORIGINAL PRICE",
+        type: "number"
+    },
+    {
+        label: "PRODUCT NAME",
+        type: "text"
+    },
+    {
+        label: "SHORT NAME",
+        type: "text"
+    },
+    {
+        label: "SALE PRICE",
+        type: "number"
+    },
+    {
+        label: "Description",
+        type: "textarea"
+    },
+]
+
 const brandLists = [
   {
     brandName: "razer",
@@ -199,4 +235,4 @@ const productsInHero = [
     },
 ]
 
-export { settings, productsInHero , brandLists};
+export { settings, productsInHero , brandLists, productAttribute};
