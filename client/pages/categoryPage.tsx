@@ -89,15 +89,21 @@ function DropDownSortedBy() {
 }
 
 function ContainerSortedBy() {
-
-  const [filteredList, setFilteredList] = useState([])
+  const [filteredList, setFilteredList] = useState([]);
 
   return (
     <div className="xl:flex xl:flex-row">
       <div className="hidden xl:block xl:flex-none w-[15rem] p-4">
         <MenuFilter />
       </div>
-      <div className="xl:grow bg-pink-500">Content</div>
+      <div className="xl:grow p-4">
+        <div className="flex gap-4">
+          {[...Array(5)].map((brand, index) => {
+            return <div className="bg-[#30303C] px-2 py-1 text-[1rem]">Logitech {index}</div>;
+          })}
+        </div>
+        <div>List</div>
+      </div>
     </div>
   );
 }
@@ -159,12 +165,17 @@ function SectionFilter() {
       {[...Array(5)].map((brand, index) => {
         const [isOpen, setIsOpen] = useState(false);
         return (
-          <div className="border-b-2 border-[#cccccc] py-4 cursor-pointer" >
-            <div className="flex justify-between" onClick={()=>{setIsOpen(!isOpen)}}>
+          <div className="border-b-2 border-[#cccccc] py-4 cursor-pointer">
+            <div
+              className="flex justify-between"
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            >
               <div>BRAND</div>
               <div>+</div>
             </div>
-            <div style={{display: isOpen === true ? "block" : "none"}}>
+            <div style={{ display: isOpen === true ? "block" : "none" }}>
               {[...Array(5)].map((brand, idx) => {
                 return (
                   <Item key={idx}>
