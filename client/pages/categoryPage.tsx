@@ -127,7 +127,7 @@ const RadioButtonLabel = styled.label`
   height: 20px;
   border-radius: 50%;
   background: transparent;
-  border: 3px solid #fe665b;
+  border: 3px solid #FE665B;
 `;
 const RadioButton = styled.input`
   opacity: 0;
@@ -137,13 +137,13 @@ const RadioButton = styled.input`
   height: 25px;
   margin-right: 10px;
   &:hover ~ ${RadioButtonLabel} {
-    background: #fe665b;
+    background: #FE665B;
   }
   &:checked + ${Item} {
-    background: #fe665b;
+    background: #FE665B;
   }
   &:checked + ${RadioButtonLabel} {
-    background: #fe665b;
+    background: #FE665B;
   }
 `;
 

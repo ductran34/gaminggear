@@ -23,7 +23,7 @@ const BottomBar = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #191928;
+  background: #0F0F1C;
   width: 100%;
   aspect-ratio: 3/1.25;
   padding: 1rem 0;
