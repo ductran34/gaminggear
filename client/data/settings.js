@@ -36,8 +36,8 @@ import star_unfill from "../data/asserts/star_unfill.png"
 // <img src={images['0.png']} />
 
 const settings = {
-  primaryColor: "#FE665B",
-  whiteColor: "#FFFFFF",
+  primaryColor: "#fb4959",
+  whiteColor: "#eae7dd",
   starColor: "#FFD853",
 };
 

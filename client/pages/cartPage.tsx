@@ -18,7 +18,8 @@ const Home = () => {
       <Header></Header>
       <Container>
         <div className="grid gap-x-5 grid-cols-1 lg:grid-cols-5">
-            <div className="col-span-1 lg:col-span-3">
+            <div className="col-span-1 lg:col-span-3 space-y-5">
+                <ItemInCart {...productsInHero[0]}/>
                 <ItemInCart {...productsInHero[0]}/>
             </div>
             <div className="bg-[#191928] col-span-1 lg:col-span-2">f</div>

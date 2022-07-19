@@ -194,7 +194,7 @@ function CustomerComment() {
       ) : (
         <div className="cursor-pointer ">
           <div
-            className="text-[1.2rem] text-bold  p-2 bg-[#FE665B] w-max"
+            className="text-[1.2rem] text-bold  p-2 bg-[#fb4959] w-max"
             onClick={() => {
               setIsOpenCommentBox(true);
             }}

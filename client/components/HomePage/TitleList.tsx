@@ -27,7 +27,7 @@ function Style2({ title }: TitleListProps) {
       <BigTitle className="text-[12vw] md:text-[10vw]">
         {title ? title : "NO TITLE"}
       </BigTitle>
-      <div className="absolute bottom-0 left-[3rem] leading-none text-[#ffffff] text-[5vw] md:text-[3vw] font-[600] ">
+      <div className="absolute bottom-0 left-[3rem] leading-none text-[#eae7dd] text-[5vw] md:text-[3vw] font-[600] ">
         {title ? title : "NO TITLE"}
       </div>
     </div>

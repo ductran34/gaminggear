@@ -6,7 +6,6 @@ import { productsInHero } from "data/settings";
 const ProductContainer = styled.div`
   width: 100%;
   display: grid;
-  grid-auto-rows: 450px;
   align-items: center;
   justify-content: space-between;
 
@@ -24,7 +23,7 @@ const ProductBox = styled.div`
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
-  aspect-ratio: 0.8;
+  aspect-ratio: 3/2;
   padding: 0;
   display: flex;
   flex-direction: column;

@@ -25,7 +25,7 @@ const ProductInfo = styled.div`
 `;
 const ShortName = styled.div`
   position: absolute;
-  color: #FE665B;
+  color: #fb4959;
   width: 100%;
   height: 100%;
   z-index: 0;
@@ -47,9 +47,9 @@ const Home = () => {
       <Container>
         <ProductInfo className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 2xl:grid-cols-7 gap-4 text-[1.5rem]" >
           <div className={" lg:col-span-2 xl:col-span-1 2xl:col-span-2"}>
-            <div className={" text-[#FE665B] font-semibold uppercase text-lg"}>{productsInHero[0].brand}</div>
+            <div className={" text-[#fb4959] font-semibold uppercase text-lg"}>{productsInHero[0].brand}</div>
             <div className={"text-white font-semibold uppercase text-3lx"}>{productsInHero[0].name}</div>
-            <div className={" text-[#FE665B] font-semibold uppercase text-3lx"}>{`$${productsInHero[0].salePrice.toFixed(2)}`}</div>
+            <div className={" text-[#fb4959] font-semibold uppercase text-3lx"}>{`$${productsInHero[0].salePrice.toFixed(2)}`}</div>
             <div className={"text-white font-semibold uppercase text-lg line-through"}>{`$${productsInHero[0].originalPrice.toFixed(2)}`}</div>
             <div className="flex flex-row justify-between">
               <Button size="large" variant="primary" role="button">ADD TO CART</Button>

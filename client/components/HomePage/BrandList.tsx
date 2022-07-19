@@ -15,11 +15,15 @@ const BrandContainer = styled.div`
 `;
 
 const BrandBox = styled.div`
-  background-color: #44464a;
+  background-color: #1f2631;
   border: 2px solid #c4c4c4;
   text-align: center;
   padding: 0.5rem;
   cursor: pointer;
+  :hover {
+    background-color: #404855
+    
+  }
 `;
 
 function BrandList() {

@@ -17,11 +17,11 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   height: 5rem;
   width: 100%;
   padding: 0 1.5rem;
-  background: ${(props) => (props?.scrollNav === false ? "transparent" : "#FE665B")};
+  background: ${(props) => (props?.scrollNav === false ? "transparent" : "#fb4959")};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${(props) => (props?.scrollNav === false ? "#fff" : "#16202a")};
+  color: ${(props) => (props?.scrollNav === false ? "#eae7dd" : "#16202a")};
   z-index: 99;
 `;
 
@@ -33,9 +33,9 @@ const StyledLink = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   padding: 0rem 2rem;
   cursor: pointer;
   font-weight: 600;
-  color: ${(props) => (props?.scrollNav === false ? "#fff" : "#16202a")};
+  color: ${(props) => (props?.scrollNav === false ? "#eae7dd" : "#16202a")};
   :hover {
-    color: ${(props) => (props?.scrollNav === false ? "#FE665B" : "#fff")};;
+    color: ${(props) => (props?.scrollNav === false ? "#fb4959" : "#eae7dd")};;
   }
 `;
 const Circle = styled.div.attrs<Pick<INavProps, "scrollNav">>(
@@ -47,9 +47,9 @@ const Circle = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   flex-direction: row;
   align-content: center;
   justify-content: center;
-  background: ${(props) => (props?.scrollNav === false ? "#fe665b86" : "#c5c5c586")};
-  color: ${(props) => (props?.scrollNav === false ? "#FFFFFF" : "#fff")};
-  border: 2px solid ${(props) => (props?.scrollNav === false ? "#FE665B" : "#fff")};;
+  background: ${(props) => (props?.scrollNav === false ? "#fb495970" : "#c5c5c586")};
+  color: ${(props) => (props?.scrollNav === false ? "#eae7dd" : "#eae7dd")};
+  border: 2px solid ${(props) => (props?.scrollNav === false ? "#fb4959" : "#eae7dd")};;
   border-radius: 50px;
   width: 2rem;
   height: 2rem;
@@ -65,9 +65,9 @@ const Text = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   padding: 0rem 1rem;
   cursor: pointer;
   font-weight: 600;
-  color: ${(props) => (props?.scrollNav === false ? "#fff" : "#c5c5c5")};
+  color: ${(props) => (props?.scrollNav === false ? "#eae7dd" : "#c5c5c5")};
   :hover {
-    color: #fff;
+    color: #eae7dd;
   }
 `;
 

@@ -68,7 +68,7 @@ function Text({label}:FieldProps) {
         {label}
       </label>
       <input
-        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#FE665B] focus:outline-none focus:border-[#FE665B] focus:bg-[#fe665b86] focus:text-[#fff] placeholder:text-[#fff]"
+        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         type="text"
         placeholder="Doe"
@@ -87,7 +87,7 @@ function Number({label}:FieldProps) {
        {label}
       </label>
       <input
-        className="block appearance-none w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#FE665B] focus:outline-none focus:border-[#FE665B] focus:bg-[#fe665b86] focus:text-[#fff] placeholder:text-[#fff]"
+        className="block appearance-none w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         type="number"
         placeholder="Doe"
@@ -106,7 +106,7 @@ function TextArea({label}:FieldProps) {
         {label}
       </label>
       <textarea
-        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#FE665B] focus:outline-none focus:border-[#FE665B] focus:bg-[#fe665b86] focus:text-[#fff] placeholder:text-[#fff]"
+        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         placeholder="Description"
       />

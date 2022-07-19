@@ -40,7 +40,7 @@ function DropDownSortedBy() {
   // },[]);
 
   return (
-    <div className="relative w-full bg-[#FE665B] p-2 text-[#ffffff] flex justify-between">
+    <div className="relative w-full bg-[#fb4959] p-2 text-[#eae7dd] flex justify-between">
       <div>FILTER</div>
       <button
         // ref={btnRef}
@@ -54,7 +54,7 @@ function DropDownSortedBy() {
         SORTED BY: {selection}
       </button>
       <div
-        className="absolute right-2 bg-[#FE665B] "
+        className="absolute right-2 bg-[#fb4959] "
         style={{
           display: isDropdown ? "block" : "none",
         }}
@@ -133,7 +133,7 @@ const RadioButtonLabel = styled.label`
   height: 20px;
   border-radius: 50%;
   background: transparent;
-  border: 3px solid #FE665B;
+  border: 3px solid #fb4959;
 `;
 const RadioButton = styled.input`
   opacity: 0;
@@ -143,13 +143,13 @@ const RadioButton = styled.input`
   height: 25px;
   margin-right: 10px;
   &:hover ~ ${RadioButtonLabel} {
-    background: #FE665B;
+    background: #fb4959;
   }
   &:checked + ${Item} {
-    background: #FE665B;
+    background: #fb4959;
   }
   &:checked + ${RadioButtonLabel} {
-    background: #FE665B;
+    background: #fb4959;
   }
 `;
 

@@ -11,7 +11,7 @@ export const Button = styled.button.attrs<Pick<IButtonProps, "size">>(
     }
 )<IButtonProps>`
     background: ${(props) => 
-        props?.variant === "primary" ? "#FE665B" : "#262632"};
+        props?.variant === "primary" ? "#fb4959" : "#262632"};
     box-sizing: border-box;
     color: #F8F9FD;
     cursor: pointer;
