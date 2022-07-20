@@ -2,21 +2,66 @@ import React from "react";
 
 interface InputFieldProps {
   type: string;
-  label:string;
+  label: string;
   options?: Array<string>;
+  productAttributeState: Map<string, any>;
+  setProductAttributeState: React.Dispatch<React.SetStateAction<any>>;
 }
 
-function InputField({ type, label, options}: InputFieldProps) {
+function handleChange(evt: React.ChangeEvent<HTMLInputElement>, label: string,  productAttributeState: Map<string, any>, setProductAttributeState: React.Dispatch<React.SetStateAction<any>>) {
+  const value = evt.target.value;
+  setProductAttributeState(new Map(productAttributeState.set(label,value)));
+}
+function handleChangeSelect(evt: React.ChangeEvent<HTMLSelectElement>, label: string,  productAttributeState: Map<string, any>, setProductAttributeState: React.Dispatch<React.SetStateAction<any>>) {
+  const value = evt.target.value;
+  setProductAttributeState(new Map(productAttributeState.set(label,value)));
+}
+function handleChangeTextArea(evt: React.ChangeEvent<HTMLTextAreaElement>, label: string,  productAttributeState: Map<string, any>, setProductAttributeState: React.Dispatch<React.SetStateAction<any>>) {
+  const value = evt.target.value;
+  setProductAttributeState(new Map(productAttributeState.set(label,value)));
+}
+
+
+function InputField({
+  type,
+  label,
+  options,
+  productAttributeState,
+  setProductAttributeState,
+}: InputFieldProps) {
   return (
-    <div className="w-full px-3">
+    <div className="w-full">
       {type === "text" ? (
-        <Text label={label}/>
+        <Text
+          label={label}
+          productAttributeState={productAttributeState}
+          setProductAttributeState={setProductAttributeState}
+        />
       ) : (
         <>
           {type === "option" ? (
-            <Select label={label} options={options}/>
+            <Select
+              label={label}
+              options={options}
+              productAttributeState={productAttributeState}
+              setProductAttributeState={setProductAttributeState}
+            />
           ) : (
-            <>{type === "number" ? <Number  label={label}/> : <TextArea label={label}/>}</>
+            <>
+              {type === "number" ? (
+                <Number
+                  label={label}
+                  productAttributeState={productAttributeState}
+                  setProductAttributeState={setProductAttributeState}
+                />
+              ) : (
+                <TextArea
+                  label={label}
+                  productAttributeState={productAttributeState}
+                  setProductAttributeState={setProductAttributeState}
+                />
+              )}
+            </>
           )}
         </>
       )}
@@ -25,25 +70,36 @@ function InputField({ type, label, options}: InputFieldProps) {
 }
 
 interface FieldProps {
-  label:string;
+  label: string;
   options?: Array<string>;
+  productAttributeState: Map<string, any>;
+  setProductAttributeState: React.Dispatch<React.SetStateAction<any>>;
 }
 
-function Select({label, options}:FieldProps) {
+function Select({
+  label,
+  options,
+  productAttributeState,
+  setProductAttributeState,
+}: FieldProps) {
+
   return (
     <div className="relative ">
       <label
-        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        className="block uppercase tracking-wide text-[#fff] text-xs font-bold mb-2"
         htmlFor="grid-last-name"
       >
         {label}
       </label>
-      <select className="block placeholder-pink-400 appearance-none w-full bg-[#262632] border hover:border-gray-500 py-3 px-4 rounded shadow leading-tight focus:outline-none ">
-          {options?.map((option,index) => {
-              return (
-                <option key={index}>{option}</option>
-              )
-          })}
+      <select 
+        onChange={(evt: React.ChangeEvent<HTMLSelectElement>)=> {
+          handleChangeSelect(evt,label,productAttributeState,setProductAttributeState);
+        }}
+        className="block appearance-none w-full bg-[#262632] text-[#fff] border border-[#fff] hover:border-[#fb4959] py-3 px-4 rounded shadow leading-tight focus:outline-none ">
+        {options?.map((option, index) => 
+        {
+          return <option key={index}>{option}</option>;
+        })}
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center py-3 px-4 text-grey-700">
         <svg
@@ -58,57 +114,80 @@ function Select({label, options}:FieldProps) {
   );
 }
 
-function Text({label}:FieldProps) {
+function Text({
+  label,
+  productAttributeState,
+  setProductAttributeState,
+}: FieldProps) {
+
+
   return (
     <div className="">
       <label
-        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        className="block uppercase tracking-wide text-[#fff] text-xs font-bold mb-2"
         htmlFor="grid-last-name"
       >
         {label}
       </label>
       <input
-        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
+        className="block w-full bg-transparent border border-[#fff] rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         type="text"
         placeholder="Doe"
+        onChange={(evt: React.ChangeEvent<HTMLInputElement>)=> {
+          handleChange(evt,label,productAttributeState,setProductAttributeState);
+        }}
       />
     </div>
   );
 }
 
-function Number({label}:FieldProps) {
+function Number({
+  label,
+  productAttributeState,
+  setProductAttributeState,
+}: FieldProps) {
   return (
     <div className="">
       <label
-        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        className="block uppercase tracking-wide text-[#fff] text-xs font-bold mb-2"
         htmlFor="grid-last-name"
       >
-       {label}
+        {label}
       </label>
       <input
-        className="block appearance-none w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
+        className="block appearance-none w-full bg-transparent border border-[#fff] rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         type="number"
         placeholder="Doe"
+        onChange={(evt: React.ChangeEvent<HTMLInputElement>)=> {
+          handleChange(evt,label,productAttributeState,setProductAttributeState);
+        }}
       />
     </div>
   );
 }
 
-function TextArea({label}:FieldProps) {
+function TextArea({
+  label,
+  productAttributeState,
+  setProductAttributeState,
+}: FieldProps) {
   return (
     <div className="">
       <label
-        className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+        className="block uppercase tracking-wide text-[#fff] text-xs font-bold mb-2"
         htmlFor="grid-last-name"
       >
         {label}
       </label>
       <textarea
-        className="block w-full bg-transparent border rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
+        className="block w-full bg-transparent border border-[#fff] rounded py-3 px-4 leading-tight hover:border-[#fb4959] focus:outline-none focus:border-[#fb4959] focus:bg-[#fb495970] focus:text-[#eae7dd] placeholder:text-[#eae7dd]"
         id="grid-last-name"
         placeholder="Description"
+        onChange={(evt: React.ChangeEvent<HTMLTextAreaElement>)=> {
+          handleChangeTextArea(evt,label,productAttributeState,setProductAttributeState);
+        }}
       />
     </div>
   );
