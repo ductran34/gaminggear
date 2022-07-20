@@ -35,8 +35,8 @@ import star_unfill from "../data/asserts/star_unfill.png"
 
 // <img src={images['0.png']} />
 
-const settings = {
-  primaryColor: "#fb4959",
+var settings = {
+  primaryColor: "#fb4959", //fb4959
   whiteColor: "#eae7dd",
   starColor: "#FFD853",
 };
@@ -46,9 +46,7 @@ const productAttribute = [
     {
         label: "BRAND",
         type: "option",
-        options: [
-            "Logitech", "Razer", "Corsair", "Hyperx", "Dxracer", "Steelseries"
-        ]
+        options: [ "Logitech", "Razer", "Corsair", "Hyperx", "Dxracer", "Steelseries"]
     },
     {
         label: "CATEGORY",
