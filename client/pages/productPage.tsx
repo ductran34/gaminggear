@@ -45,12 +45,17 @@ const Home = () => {
     <BasicLayout>
       <Header></Header>
       <Container>
-        <ProductInfo className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 2xl:grid-cols-7 gap-4 text-[1.5rem]" >
-          <div className={" lg:col-span-2 xl:col-span-1 2xl:col-span-2"}>
-            <div className={" text-[#fb4959] font-semibold uppercase text-lg"}>{productsInHero[0].brand}</div>
-            <div className={"text-white font-semibold uppercase text-3lx"}>{productsInHero[0].name}</div>
-            <div className={" text-[#fb4959] font-semibold uppercase text-3lx"}>{`$${productsInHero[0].salePrice.toFixed(2)}`}</div>
-            <div className={"text-white font-semibold uppercase text-lg line-through"}>{`$${productsInHero[0].originalPrice.toFixed(2)}`}</div>
+        <ProductInfo className="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 2xl:grid-cols-7 gap-4" >
+          <div className={" lg:col-span-2 xl:col-span-1 2xl:col-span-2 space-y-3"}>
+            <div className="w-full flex flex-row items-center space-x-3">
+              <div className="bg-[#fb4959] flex-1 h-1"> </div>
+              <div className={" text-[#fb4959] font-semibold uppercase text-3xl"}>{productsInHero[0].brand}</div>
+            </div>
+            <div className={"text-white font-semibold uppercase text-5xl text-left"}>{productsInHero[0].name}</div>
+            <div className="flex flex-row  space-x-3">
+              <div className={" text-[#fb4959] font-semibold uppercase text-2xl"}>{`$${productsInHero[0].salePrice.toFixed(2)}`}</div>
+              <div className={"text-white font-semibold uppercase text-2xl line-through"}>{`$${productsInHero[0].originalPrice.toFixed(2)}`}</div>
+            </div>
             <div className="flex flex-row justify-between">
               <Button size="large" variant="primary" role="button">ADD TO CART</Button>
               <AiOutlineHeart style={{ color: "white", cursor: "pointer" }} />

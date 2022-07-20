@@ -10,8 +10,8 @@ export const Button = styled.button.attrs<Pick<IButtonProps, "size">>(
         size: props?.size;
     }
 )<IButtonProps>`
-    background: ${(props) => 
-        props?.variant === "primary" ? "#fb4959" : "#262632"};
+    background: ${(props) => props?.variant === "primary" ? "#fb495970" : "#262632"};
+    border: 2px solid #fb4959;
     box-sizing: border-box;
     color: #F8F9FD;
     cursor: pointer;
@@ -22,7 +22,6 @@ export const Button = styled.button.attrs<Pick<IButtonProps, "size">>(
     padding: ${(props) => (props?.size === "large" ? "10px 18px" : "8px 18px")};
     width: fit-content;
     word-break: break-word;
-    border: 0;
     margin: 0.25em;
 
     animation-name: simple-animation;
@@ -30,7 +29,7 @@ export const Button = styled.button.attrs<Pick<IButtonProps, "size">>(
     animation-iteration-count: initial;
 
     &:hover {
-        background-color: #d8665e;
+        background-color: #fb4959;
     }
     @keyframes simple-animation {
         0% {

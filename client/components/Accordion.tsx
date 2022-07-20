@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
 
+export interface IAccordionProps {
+  variant?: "primary" | "secondary";
+  isActive: boolean;
+}
+
 interface AccordionProps {
   title: string;
   content?: any;
@@ -9,20 +14,34 @@ interface AccordionProps {
   setActiveIndex: (activeIndex: number) => void;
 };
 
-const AccordionItem = styled.div`
+const AccordionItem = styled.div.attrs<Pick<IAccordionProps, "isActive">>(
+  (props) => {
+    scrollNav: props?.isActive;
+  }
+)<IAccordionProps>`
   width: 100%;
-  border-bottom: 2px solid white;
-  padding: 1rem 0;
+  background: ${(props) => (props?.isActive === false ? "transparent" : "#fb495970")};
+  border-bottom: 1px solid ${(props) => (props?.isActive === false ? "#fff" : "#fb4959")};;
 `;
 
-const AccordionTitle = styled.div`
+const AccordionTitle = styled.div.attrs<Pick<IAccordionProps, "isActive">>(
+  (props) => {
+    scrollNav: props?.isActive;
+  }
+)<IAccordionProps>`
   display: flex;
+  user-select: none;
   flex-direction: row;
   justify-content: space-between;
   color: white;
   font-size: 1.25rem;
+  padding: 0.5rem;
   cursor: pointer;
   text-transform: uppercase;
+  background: ${(props) => (props?.isActive === false ? "transparent" : "#fb495970")};
+  :hover {
+    background: #fb495970;
+  }
 `;
 
 const AccordionBar = styled.div`
@@ -32,6 +51,9 @@ const AccordionBar = styled.div`
   color: white;
   font-size: 1rem;
   padding-top: 0.5rem;
+  padding: 0.5rem;
+  align-items: center;
+  user-select: none;
 `;
 
 const AccordionAnimation = keyframes`
@@ -51,12 +73,12 @@ function Accordion({title, content, index, activeIndex, setActiveIndex}:Accordio
   const isActive = index === activeIndex ? true : false;
   const handleOpen = () => {
     //setIsActive(!isActive)
-    setActiveIndex(activeIndex === index ? 0 : index);
+    setActiveIndex(activeIndex === index ? -1 : index);
   };
 
   return (
-    <AccordionItem>
-      <AccordionTitle onClick={() => setActiveIndex(index)}>
+    <AccordionItem  isActive={isActive}>
+      <AccordionTitle isActive={isActive} onClick={() => handleOpen()}>
         <div>{title}</div>
         <div>{isActive ? '-' : '+'}</div>
       </AccordionTitle>

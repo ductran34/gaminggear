@@ -122,7 +122,7 @@ const brandLists = [
 
 const productsInHero = [
     {
-        brand: "Razer",
+        brand: "Logitech",
         name: "AZ1 Deathadder Pro",
         shortName: "AZ1",
         salePrice: 59.99,
