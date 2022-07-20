@@ -1,5 +1,19 @@
 /*=========== RAZER PRODUCT IMAGE ===============*/
-import AZ1_DEATHADDERV2 from "../data/mouses/razer/az1_razer_1.png";
+import az1 from "../data/mouses/razer/az1_razer_1.png";
+import aerox3 from "../data/mouses/steelseries/aerox3/aerox3_steelseries_1.png";
+import g305 from "../data/mouses/logitech/g305/g305_logitech_1.png";
+
+import cloud from "../data/headsets/hyperx/cloud_hyperx_1.png";
+import arctis9 from "../data/headsets/steelseries/arctis9/arctis9_steelseries_1.png";
+import g733 from "../data/headsets/logitech/g733/g733_logitech_1.png";
+
+import enki from "../data/chairs/razer/enki/pink/enki_razer_pink_1.png";
+import rv131 from "../data/chairs/dxracer/rv131/rv131_dxracer_1.png";
+import fd01 from "../data/chairs/dxracer/fd01/red/fd01_dxracer_1.png";
+
+import g915 from "../data/keyboards/logitech/g915_logitech_1.png";
+import apexpro from "../data/keyboards/steelseries/apexpro/apex_steelseries_1.png";
+import k8 from "../data/keyboards/keychron/k8/k8_keychron_1.png";
 //import logitech from "../data/brands/1.png";
 
 // BRAND LIST FULL LOGO
@@ -120,17 +134,18 @@ const brandLists = [
 
 const productsInHero = [
     {
-        brand: "Logitech",
+        brand: "rzaer",
         name: "AZ1 Deathadder Pro",
         shortName: "AZ1",
         salePrice: 59.99,
         originalPrice: 69.99,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: razer_full,
+        productImage: az1,
+        brandImage: razer,
         brandLogo: razer,
+        category: "mouse",
         specifications: [
             {
-                title: "sensor",
+                title: "Sensitivity",
                 content: {
                     maxSensitivity: 20000,
                     maxSpeed: 650,
@@ -139,7 +154,7 @@ const productsInHero = [
                 }
             },
             {
-                title: "properties",
+                title: "Technical Specifications",
                 content: {
                     battery: "None",
                     connection: "wired",
@@ -147,7 +162,7 @@ const productsInHero = [
                 }
             },
             {
-                title: "Dimensions",
+                title: "Physical Specifications",
                 content: {
                     width: 61.7,
                     height: 127.0,
@@ -158,16 +173,17 @@ const productsInHero = [
         ]
     },
     {
-        brand: "SteelSeries",
-        name: "Aerox 3 Gaming Mouse",
+        brand: "steelseries",
+        name: "Aerox 3 2022 Edition",
         shortName: "Aerox",
         salePrice: 39.99,
         originalPrice: 59.99,
-        productImage: AZ1_DEATHADDERV2,
+        productImage: aerox3,
         brandImage: steelseries,
+        category: "mouse",
         specifications: [
             {
-                title: "sensor",
+                title: "Sensitivity",
                 content: {
                     maxSensitivity: 20000,
                     maxSpeed: 300,
@@ -176,7 +192,7 @@ const productsInHero = [
                 }
             },
             {
-                title: "properties",
+                title: "Technical Specifications",
                 content: {
                     battery: "None",
                     connection: "wired",
@@ -184,7 +200,7 @@ const productsInHero = [
                 }
             },
             {
-                title: "Dimensions",
+                title: "Physical Specifications",
                 content: {
                     width: 61.7,
                     height: 127.0,
@@ -195,16 +211,17 @@ const productsInHero = [
         ]
     },
     {
-        brand: "SteelSeries",
-        name: "Rival 5 Gaming Mouse",
-        shortName: "RIval 5",
+        brand: "logitech",
+        name: "G503 HERO",
+        shortName: "G503",
         salePrice: 39.99,
         originalPrice: 59.99,
-        productImage: AZ1_DEATHADDERV2,
-        brandImage: steelseries,
+        productImage: g305,
+        brandImage: logitech,
+        category: "mouse",
         specifications: [
             {
-                title: "sensor",
+                title: "Sensitivity",
                 content: {
                     maxSensitivity: 20000,
                     maxSpeed: 400,
@@ -213,7 +230,7 @@ const productsInHero = [
                 }
             },
             {
-                title: "properties",
+                title: "Technical Specifications",
                 content: {
                     battery: "None",
                     connection: "wired",
@@ -221,7 +238,403 @@ const productsInHero = [
                 }
             },
             {
-                title: "Dimensions",
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "hyperx",
+        name: "HyperX Cloud Core",
+        shortName: "cloud",
+        salePrice: 39.99,
+        originalPrice: 59.99,
+        productImage: cloud,
+        brandImage: hyperx,
+        category: "headset",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "steelseries",
+        name: " Arctis 9 Wireless",
+        shortName: "arctis9",
+        salePrice: 39.99,
+        originalPrice: 59.99,
+        productImage: arctis9,
+        brandImage: steelseries,
+        category: "headset",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "logitech",
+        name: "G733 Ultra-Lightweight",
+        shortName: "g733",
+        salePrice: 39.99,
+        originalPrice: 59.99,
+        productImage: g733,
+        brandImage: logitech,
+        category: "headset",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "logitech",
+        name: "g915 LIGHTSPEED Wireless",
+        shortName: "g915",
+        salePrice: 129.99,
+        originalPrice: 259.99,
+        productImage: g915,
+        brandImage: logitech,
+        category: "keyboard",
+        specifications: [
+            {
+                title: "Switch",
+                content: {
+                    actuationDistance: 1.5,
+                    actuationForce: 50,
+                    totalTravelDistance: 2.7,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "steelseries",
+        name: "Apex Pro RGB",
+        shortName: "apex",
+        salePrice: 89.99,
+        originalPrice: 199.99,
+        productImage: apexpro,
+        brandImage: steelseries,
+        category: "keyboard",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "keychron",
+        name: "K8 Wireless Mechanical",
+        shortName: "k8",
+        salePrice: 59.99,
+        originalPrice: 79.99,
+        productImage: k8,
+        brandImage: corsair,
+        category: "keyboard",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "razer",
+        name: "Enki Gaming Chair",
+        shortName: "enki",
+        salePrice: 399.99,
+        originalPrice: 399.99,
+        productImage: enki,
+        brandImage: razer,
+        category: "chair",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "dxracer",
+        name: "FD01 Formula Series",
+        shortName: "fd01",
+        salePrice: 299.99,
+        originalPrice: 329.99,
+        productImage: fd01,
+        brandImage: dxracer,
+        category: "chair",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
+                content: {
+                    width: 61.7,
+                    height: 127.0,
+                    depth: 42.7,
+                    weight: 59,
+                }
+            },
+        ]
+    },
+    {
+        brand: "dxracer",
+        name: "RV131 Racing Series",
+        shortName: "rv131",
+        salePrice: 299.99,
+        originalPrice: 399.99,
+        productImage: rv131,
+        brandImage: dxracer,
+        category: "chair",
+        specifications: [
+            {
+                title: "Headphone",
+                content: {
+                    driver: "40",
+                    frequencyResponse: "15Hz-25kHz",
+                    sensitivity: 98,
+                    impedance: 40,
+                }
+            },
+            {
+                title: "Microphone",
+                content: {
+                    frequencyResponse: "100–6kHz",
+                    pattern: "Uni-directional, Noise-cancelling",
+                    sensitivity: -46,
+                }
+            },
+            {
+                title: "Technical Specifications",
+                content: {
+                    battery: "None",
+                    connection: "wired",
+                }
+            },
+            {
+                title: "Physical Specifications",
                 content: {
                     width: 61.7,
                     height: 127.0,

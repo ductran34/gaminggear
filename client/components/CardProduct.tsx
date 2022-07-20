@@ -13,7 +13,7 @@ interface ProductProps {
   originalPrice: number;
   salePrice: number;
   productImage: any;
-  brandLogo: any;
+  brandImage: any;
 };
 const Card = styled.div`
 position: relative;
@@ -66,7 +66,7 @@ const Circle = styled.div.attrs<Pick<INavProps, "isLiked">>(
     border: 2px solid #fb4959;
   }
 `
-function CardProduct({ brand, name, shortName, salePrice, originalPrice, productImage, brandLogo }: ProductProps) {
+function CardProduct({ brand, name, shortName, salePrice, originalPrice, productImage, brandImage }: ProductProps) {
 
   const [isLiked, setIsLiked] = useState(false);
 
@@ -83,13 +83,13 @@ function CardProduct({ brand, name, shortName, salePrice, originalPrice, product
       )}
       <div className='relative row-span-2 flex justify-center w-full overflow-hidden'>
         <img style={{ width: "75%", zIndex: "1" }} src={productImage.src} />
-        <img style={{ position: "absolute", top: "0", right: "0", width: "150%", zIndex: "0", opacity: "1" }} src={brandLogo.src} />
+        <img style={{ position: "absolute", top: "0", right: "0", width: "150%", zIndex: "0", opacity: "1" }} src={brandImage.src} />
       </div>
       <SaleBar>20% OFF</SaleBar>
       <BottomBar>
         <div className={"w-full h-1/2 bg-yellow flex flex-col mb-2 leading-none"}>
           <div className={"w-full text-[#fb4959] text-lg text-center"}>{brand}</div>
-          <div className={"w-full text-white text-3xl text-center"}>{shortName}</div>
+          <div className={"w-full text-white text-3xl text-center uppercase "}>{shortName}</div>
         </div>
         <div className={"w-full h-1/2 bg-[#0f1923] flex flex-row justify-center items-center px-2"}>
           <div className={" text-[#fb4959]  text-xl text-center mr-3 content-center"}>{`$${salePrice}`}</div>

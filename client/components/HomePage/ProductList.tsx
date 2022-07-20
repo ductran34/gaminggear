@@ -35,14 +35,10 @@ function ProductList() {
     <div>
       <TitleList title="BEST SELLING" />
       <ProductContainer>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
-        <CardProduct {...productsInHero[0]}/>
+        {productsInHero.map((product, index) => (
+          <CardProduct key={index} {...product}/>
+        ))}
+
       </ProductContainer>
     </div>
   );

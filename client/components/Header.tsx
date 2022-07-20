@@ -53,7 +53,6 @@ const Circle = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   border-radius: 50px;
   width: 2rem;
   height: 2rem;
-  margin-left:1rem;
   line-height: 1.75rem;
 `;
 
@@ -63,6 +62,7 @@ const Text = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   }
 )<INavProps>`
   padding: 0rem 1rem;
+  padding-right: 0;
   cursor: pointer;
   font-weight: 600;
   color: ${(props) => (props?.scrollNav === false ? "#eae7dd" : "#c5c5c5")};
@@ -118,11 +118,14 @@ function Header() {
             <Text scrollNav={isScrolled}>$450</Text>
           </div>
         </Link>
-        <div className={"border border-solid border-gray-400"}></div>
-        <div className={"flex items-center"}>
+        <div className={"border border-solid border-gray-400 mx-4"}></div>
+        {/* <div className={"flex items-center"}>
           <Circle scrollNav={isScrolled}>3</Circle>
           <Text scrollNav={isScrolled}>Chris Tran</Text>
-        </div>
+        </div> */}
+          <div className={`flex items-center border-2 border-solid ${!isScrolled ? 'border-[#fb4959] bg-[#fb495970]' : 'border-[#eae7dd] bg-[#c5c5c586]'}  py-1 px-2 `}>
+            BUY NOW
+          </div>
       </div>
     </Nav>
   )
