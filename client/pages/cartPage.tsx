@@ -10,7 +10,7 @@ import Image from "next/image";
 import ItemInCart from "components/ItemInCart";
 
 
-const Home = () => {
+const cartPage = () => {
 
 
   return (
@@ -29,4 +29,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default cartPage;

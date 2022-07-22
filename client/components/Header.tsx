@@ -12,7 +12,7 @@ const Nav = styled.nav.attrs<Pick<INavProps, "scrollNav">>(
   (props) => {
     scrollNav: props?.scrollNav;
   }
-)<INavProps>`
+) <INavProps>`
   position: fixed;
   height: 5rem;
   width: 100%;
@@ -29,7 +29,7 @@ const StyledLink = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   (props) => {
     scrollNav: props?.scrollNav;
   }
-)<INavProps>`
+) <INavProps>`
   padding: 0rem 2rem;
   cursor: pointer;
   font-weight: 600;
@@ -42,7 +42,7 @@ const Circle = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   (props) => {
     scrollNav: props?.scrollNav;
   }
-)<INavProps>`
+) <INavProps>`
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -60,7 +60,7 @@ const Text = styled.div.attrs<Pick<INavProps, "scrollNav">>(
   (props) => {
     scrollNav: props?.scrollNav;
   }
-)<INavProps>`
+) <INavProps>`
   padding: 0rem 1rem;
   padding-right: 0;
   cursor: pointer;
@@ -123,9 +123,12 @@ function Header() {
           <Circle scrollNav={isScrolled}>3</Circle>
           <Text scrollNav={isScrolled}>Chris Tran</Text>
         </div> */}
-          <div className={`flex items-center border-2 border-solid ${!isScrolled ? 'border-[#fb4959] bg-[#fb495970]' : 'border-[#eae7dd] bg-[#c5c5c586]'}  py-1 px-2 `}>
+        <Link href='/authenticationPage' passHref>
+          <div className={`flex items-center border-2 cursor-pointer border-solid ${!isScrolled ? 'border-[#fb4959] bg-[#fb495970]' : 'border-[#eae7dd] bg-[#c5c5c586]'}  py-1 px-2 hover:bg-[#fb4959]`}>
             BUY NOW
           </div>
+        </Link>
+
       </div>
     </Nav>
   )
